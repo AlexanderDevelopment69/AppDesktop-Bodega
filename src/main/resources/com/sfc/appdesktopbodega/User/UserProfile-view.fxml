@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import io.github.palexdev.materialfx.controls.MFXScrollPane?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+
+<AnchorPane fx:id="stackDashboard" stylesheets="@../Styles/Style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sfc.appdesktopbodega.Controller.User.UserProfileController">
+   <children>
+      <MFXScrollPane fitToHeight="true" fitToWidth="true" style="-fx-background-color: transparent;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <content>
+            <AnchorPane styleClass="color-panel">
+               <children>
+                  <AnchorPane layoutX="50.0" layoutY="21.0" prefHeight="676.0" prefWidth="932.0" style="-fx-background-color: white;" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="21.0">
+                     <children>
+                        <Label layoutX="231.0" layoutY="152.0" prefHeight="44.0" prefWidth="250.0" style="-fx-background-radius: 5;" styleClass="color-panel">
+                           <graphic>
+                              <JFXTextField fx:id="image" editable="false" focusColor="WHITE" labelFloat="true" opacity="0.8" prefHeight="38.0" prefWidth="218.0" promptText="Perfil" styleClass="style-font-black" unFocusColor="WHITE">
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                              </JFXTextField>
+                           </graphic>
+                           <padding>
+                              <Insets right="70.0" />
+                           </padding>
+                        </Label>
+                        <Label layoutX="50.0" layoutY="281.0" prefHeight="44.0" prefWidth="250.0" style="-fx-background-radius: 5;" styleClass="color-panel">
+                           <graphic>
+                              <JFXTextField fx:id="code" focusColor="WHITE" labelFloat="true" opacity="0.8" prefHeight="38.0" promptText="Codigo" styleClass="style-font-black" unFocusColor="WHITE">
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                              </JFXTextField>
+                           </graphic>
+                           <padding>
+                              <Insets right="20.0" />
+                           </padding>
+                        </Label>
+                        <Label layoutX="50.0" layoutY="358.0" prefHeight="44.0" prefWidth="250.0" style="-fx-background-radius: 5;" styleClass="color-panel">
+                           <graphic>
+                              <JFXTextField fx:id="dni" focusColor="WHITE" labelFloat="true" opacity="0.8" prefHeight="38.0" promptText="Dni" styleClass="style-font-black" unFocusColor="WHITE">
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                              </JFXTextField>
+                           </graphic>
+                        </Label>
+                        <Label layoutX="50.0" layoutY="433.0" prefHeight="44.0" prefWidth="250.0" style="-fx-background-radius: 5;" styleClass="color-panel">
+                           <graphic>
+                              <JFXTextField fx:id="names" focusColor="WHITE" labelFloat="true" opacity="0.8" prefHeight="30.0" prefWidth="197.0" promptText="Nombres" styleClass="style-font-black" unFocusColor="WHITE">
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                              </JFXTextField>
+                           </graphic>
+                           <padding>
+                              <Insets right="20.0" />
+                           </padding>
+                        </Label>
+                        <Label layoutX="50.0" layoutY="507.0" prefHeight="44.0" prefWidth="250.0" style="-fx-background-radius: 5;" styleClass="color-panel">
+                           <graphic>
+                              <JFXTextField fx:id="lastNames" focusColor="WHITE" labelFloat="true" opacity="0.8" prefHeight="30.0" prefWidth="197.0" promptText="Apellidos" styleClass="style-font-black" unFocusColor="WHITE">
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                              </JFXTextField>
+                           </graphic>
+                           <padding>
+                              <Insets right="20.0" />
+                           </padding>
+                        </Label>
+                        <Label layoutX="346.0" layoutY="281.0" prefHeight="44.0" prefWidth="250.0" style="-fx-background-radius: 5;" styleClass="color-panel">
+                           <graphic>
+                              <JFXTextField fx:id="email" focusColor="WHITE" labelFloat="true" opacity="0.8" prefHeight="30.0" prefWidth="197.0" promptText="Email" styleClass="style-font-black" unFocusColor="WHITE">
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                              </JFXTextField>
+                           </graphic>
+                           <padding>
+                              <Insets right="20.0" />
+                           </padding>
+                        </Label>
+                        <JFXButton layoutX="231.0" layoutY="203.0" onAction="#uploadImage" style="-fx-text-fill: #BFBFBF; -fx-background-radius: 20;" text="Subir">
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Images/upload.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <Label layoutX="50.0" layoutY="61.0" style="-fx-text-fill: #767E8C;" styleClass="style-font-black" text="Mis datos " />
+                        <Label layoutX="50.0" layoutY="87.0" style="-fx-text-fill: #767E8C;" styleClass="style-font-black" text="Para editar, complete los campos del perfil." />
+                        <JFXButton layoutX="50.0" layoutY="598.0" onAction="#updateUser" prefHeight="35.0" prefWidth="100.0" styleClass="buttonGeneral-estilo2" text="Actualizar">
+                           <ripplerFill>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop color="#41e29f" />
+                                    <Stop color="#4fe87a" offset="0.007633587786259542" />
+                                    <Stop color="#262626" offset="0.9969465648854962" />
+                                    <Stop color="#72ed99" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </ripplerFill>
+                        </JFXButton>
+                        <JFXButton layoutX="175.0" layoutY="598.0" prefHeight="35.0" prefWidth="100.0" styleClass="buttonGeneral-estilo1" text="Cancelar">
+                           <ripplerFill>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop color="#7f37ed" />
+                                    <Stop color="#7f37ed" offset="0.007633587786259542" />
+                                    <Stop color="#6035cd" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </ripplerFill>
+                        </JFXButton>
+                        <Label fx:id="labelTitle" layoutX="50.0" layoutY="30.0" style="-fx-font-size: 20;" styleClass="TEXT19-BLACK" text="Mi perfil" textFill="#4f4f4f" />
+                        <ImageView fx:id="photo" fitHeight="136.0" fitWidth="144.0" layoutX="50.0" layoutY="117.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/perfil.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="346.0" layoutY="358.0" prefHeight="44.0" prefWidth="250.0" style="-fx-background-radius: 5;" styleClass="color-panel">
+                           <graphic>
+                              <JFXTextField fx:id="dateOfBirth" focusColor="WHITE" labelFloat="true" opacity="0.8" prefHeight="30.0" prefWidth="197.0" promptText="Fecha de nacimiento" styleClass="style-font-black" unFocusColor="WHITE">
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                              </JFXTextField>
+                           </graphic>
+                           <padding>
+                              <Insets right="20.0" />
+                           </padding>
+                        </Label>
+                        <Label layoutX="346.0" layoutY="433.0" prefHeight="44.0" prefWidth="250.0" style="-fx-background-radius: 5;" styleClass="color-panel">
+                           <graphic>
+                              <JFXTextField fx:id="homeAdress" focusColor="WHITE" labelFloat="true" opacity="0.8" prefHeight="30.0" prefWidth="197.0" promptText="Docimilo" styleClass="style-font-black" unFocusColor="WHITE">
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                              </JFXTextField>
+                           </graphic>
+                           <padding>
+                              <Insets right="20.0" />
+                           </padding>
+                        </Label>
+                        <Label layoutX="346.0" layoutY="507.0" prefHeight="44.0" prefWidth="250.0" style="-fx-background-radius: 5;" styleClass="color-panel">
+                           <graphic>
+                              <JFXTextField fx:id="phoneNumber" focusColor="WHITE" labelFloat="true" opacity="0.8" prefHeight="30.0" prefWidth="197.0" promptText="Celular" styleClass="style-font-black" unFocusColor="WHITE">
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                              </JFXTextField>
+                           </graphic>
+                           <padding>
+                              <Insets right="20.0" />
+                           </padding>
+                        </Label>
+                        <Label layoutX="650.0" layoutY="281.0" prefHeight="44.0" prefWidth="250.0" style="-fx-background-radius: 5;" styleClass="color-panel">
+                           <graphic>
+                              <JFXTextField fx:id="password" focusColor="WHITE" labelFloat="true" opacity="0.8" prefHeight="30.0" prefWidth="197.0" promptText="Contraseñá" styleClass="style-font-black" unFocusColor="WHITE">
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                              </JFXTextField>
+                           </graphic>
+                           <padding>
+                              <Insets right="20.0" />
+                           </padding>
+                        </Label>
+                        <Label layoutX="650.0" layoutY="358.0" prefHeight="44.0" prefWidth="250.0" style="-fx-background-radius: 5;" styleClass="color-panel">
+                           <graphic>
+                              <JFXTextField fx:id="repeatPassword" focusColor="WHITE" labelFloat="true" opacity="0.8" prefHeight="30.0" prefWidth="197.0" promptText="Repite contraseñá" styleClass="style-font-black" unFocusColor="WHITE">
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                              </JFXTextField>
+                           </graphic>
+                           <padding>
+                              <Insets right="20.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </content>
+      </MFXScrollPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,149 @@
+/*Diseño  de tabla de datos*/
+
+
+
+/* Row hovered */
+.table-view:row-selection .table-row-cell:filled:hover {
+    -fx-background-color: #D6FEDD;
+    -fx-background-insets: 0, 0 0 1 0;
+
+}
+/* Selected row */
+.table-view:focused .table-row-cell:filled:focused:selected {
+    -fx-background-color: #D6FEDD;
+    -fx-background-insets: 0, 1, 2;
+
+}
+
+
+
+/*Quitar lineas de cuadricula de la celda */
+.table-row-cell{
+    -fx-table-cell-border-color: transparent;
+}
+
+/*Color de la celda anterior*/
+.table-row-cell:odd{
+    -fx-background-color: #F7F9FB;
+}
+
+/*Color de la celda posterior*/
+.table-row-cell:even{
+    -fx-background-color: white;
+}
+
+
+/*Color del borde de tabla y el tamaño de letra para las celdas */
+.table-view{
+
+    -fx-background-color: transparent;
+    -fx-font-size: 11;
+    -fx-selection-bar:#5900FF;
+
+}
+
+/*Espaciado dentro de la celda ,color de texto de la celda y centrado de texto */
+.table-column{
+    /*-fx-background-color: #F8F9FD ;*/
+    /*-fx-background-color: #00115C;*/
+
+    -fx-text-fill: black;
+    -fx-padding : 15 0 10 0 ;
+    -fx-alignment: center;
+
+}
+/*Color del contenedor del sort-order-dot */
+.table-view .column-header .arrow, .table-view .column-header{
+    -fx-background-color: #F8F9FD;
+}
+
+/*Color del header de la tabla , tamaño de letra y cambio de fuente */
+.table-view .column-header .label {
+    -fx-font-family: "Poppins Regular";
+    -fx-text-fill : #717171;
+    -fx-background-color:  #F8F9FD;
+    /*-fx-text-fill : white;*/
+    -fx-padding : 15 5 20 5 ;
+
+}
+
+/*Color del filtro de la tabla*/
+.table-view .column-header-background .filler {
+    -fx-background-color:  white;
+}
+
+/*.table-view .cell{*/
+
+/*    -fx-background-color: white;*/
+/*    !*-fx-border-width: 0 0 0.1 0;*!*/
+/*    !*-fx-border-color: #A0A0A0;*!*/
+
+/*}*/
+
+
+.table-view .scroll-bar * {
+    /*-fx-min-width: 0;*/
+    /*-fx-pref-width: 0;*/
+    /*-fx-max-width: 0;*/
+
+    -fx-min-height: 0;
+    -fx-pref-height: 0;
+    -fx-max-height: 0;
+}
+
+/*.TableColumn{*/
+/*    -fx-background-color:  #0E0642;*/
+/*    -fx-text-fill: white;*/
+
+/*}*/
+
+
+
+
+
+.scroll-pane {
+    -fx-background-color: transparent;
+}
+.scroll-bar {
+    -fx-font-size: 5px;
+}
+.scroll-bar:horizontal, .scroll-bar:vertical{
+    -fx-background-color:transparent;
+}
+
+.increment-button, .decrement-button {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+
+}
+
+.scroll-bar:horizontal .track,
+.scroll-bar:vertical .track{
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-background-radius: 0em;
+}
+
+.scroll-bar:horizontal .thumb,
+.scroll-bar:vertical .thumb {
+    -fx-background-color: #D3D3D3;
+    -fx-background-radius: 2.0em;
+
+
+}
+.scroll-bar:horizontal .thumb:hover,
+.scroll-bar:vertical .thumb:hover {
+    -fx-background-color: rgb(88, 88, 88);
+    -fx-background-radius: 2.0em;
+
+}
+
+
+.scroll-pane > .corner {
+    -fx-background-color: transparent;
+}
+
+
+.table-view .column-header .arrow, .table-view .column-header .sort-order-dot{
+    -fx-background-color : #997BFF;
+}

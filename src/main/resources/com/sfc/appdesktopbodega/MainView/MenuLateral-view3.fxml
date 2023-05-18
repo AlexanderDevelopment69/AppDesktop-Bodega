@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" styleClass="style-font-white" stylesheets="@../Styles/Style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sfc.appdesktopbodega.Controller.MainView.MenuLateralController">
+   <left>
+      <AnchorPane fx:id="paneLateral" prefHeight="650.0" prefWidth="200.0" style="-fx-background-color: BLACK;" BorderPane.alignment="CENTER">
+         <children>
+            <VBox layoutY="52.0" prefHeight="600.0" prefWidth="200.0" styleClass="menu-left" AnchorPane.bottomAnchor="28.0">
+               <children>
+                  <JFXButton prefHeight="47.0" prefWidth="220.0" styleClass="vBoxButtonUsers" text="   Principal" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets bottom="40.0" />
+                     </VBox.margin>
+                     <ripplerFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color blue="1.0" green="0.30588236451148987" red="0.3921568691730499" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color blue="1.0" green="0.30588236451148987" red="0.3921568691730499" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </ripplerFill>
+                     <graphic>
+                        <ImageView fitHeight="31.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/analytics.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets left="-30.0" />
+                     </padding>
+                  </JFXButton>
+                  <JFXButton fx:id="btnManagment" onAction="#managment" prefHeight="47.0" prefWidth="200.0" styleClass="vBoxButtonUsers" text="   Administracion" textFill="WHITE">
+                     <ripplerFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color blue="1.0" green="0.30588236451148987" red="0.3921568691730499" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color blue="1.0" green="0.30588236451148987" red="0.3921568691730499" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </ripplerFill>
+                     <graphic>
+                        <ImageView fitHeight="31.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/user-circle.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="btnSales" layoutX="60.0" layoutY="10.0" onAction="#sales" prefHeight="47.0" prefWidth="220.0" styleClass="vBoxButtonUsers" text="   Ventas" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <ripplerFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color blue="1.0" green="0.30588236451148987" red="0.3921568691730499" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color blue="1.0" green="0.30588236451148987" red="0.3921568691730499" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </ripplerFill>
+                     <graphic>
+                        <ImageView fitHeight="31.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/shop.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets left="-45.0" />
+                     </padding>
+                  </JFXButton>
+                  <JFXButton fx:id="btnWarehouse" layoutX="10.0" layoutY="57.0" onAction="#warehouse" prefHeight="47.0" prefWidth="220.0" styleClass="vBoxButtonUsers" text="   Almacen" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <ripplerFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color blue="1.0" green="0.30588236451148987" red="0.3921568691730499" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.007633587786259542">
+                                 <color>
+                                    <Color blue="1.0" green="0.30588236451148987" red="0.3921568691730499" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color blue="1.0" green="0.30588236451148987" red="0.3921568691730499" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </ripplerFill>
+                     <graphic>
+                        <ImageView fitHeight="31.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/box.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets left="-30.0" />
+                     </padding>
+                  </JFXButton>
+                  <JFXButton fx:id="btnCustomers" onAction="#custormers" prefHeight="47.0" prefWidth="220.0" styleClass="vBoxButtonUsers" text="   Clientes" textFill="WHITE">
+                     <ripplerFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color blue="1.0" green="0.30588236451148987" red="0.3921568691730499" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.007633587786259542">
+                                 <color>
+                                    <Color blue="1.0" green="0.30588236451148987" red="0.3921568691730499" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color blue="1.0" green="0.30588236451148987" red="0.3921568691730499" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </ripplerFill>
+                     <graphic>
+                        <ImageView fitHeight="31.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/users-alt.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets left="-39.0" />
+                     </padding>
+                  </JFXButton>
+                  <JFXButton fx:id="btnProvider" layoutX="10.0" layoutY="239.0" onAction="#provider" prefHeight="47.0" prefWidth="220.0" styleClass="vBoxButtonUsers" text="   Proveedores" textFill="WHITE">
+                     <ripplerFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color blue="1.0" green="0.30588236451148987" red="0.3921568691730499" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.007633587786259542">
+                                 <color>
+                                    <Color blue="1.0" green="0.30588236451148987" red="0.3921568691730499" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color blue="1.0" green="0.30588236451148987" red="0.3921568691730499" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </ripplerFill>
+                     <graphic>
+                        <ImageView fitHeight="31.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/luggage-cart.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets left="-10.0" />
+                     </padding>
+                  </JFXButton>
+                  <JFXButton fx:id="btnConfiguration" onAction="#configuration" prefHeight="47.0" prefWidth="220.0" styleClass="vBoxButtonUsers" text="   Configuracion" textFill="WHITE">
+                     <ripplerFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color blue="1.0" green="0.30588236451148987" red="0.3921568691730499" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.007633587786259542">
+                                 <color>
+                                    <Color blue="1.0" green="0.30588236451148987" red="0.3921568691730499" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color blue="1.0" green="0.30588236451148987" red="0.3921568691730499" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </ripplerFill>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="31.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/setting.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="btnExit" layoutX="10.0" layoutY="199.0" onAction="#exit" prefHeight="47.0" prefWidth="150.0" style="-fx-background-color: #644EFF;" text="   Salir" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets left="26.0" top="100.0" />
+                     </VBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="31.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/baseline_power_settings_new_white_24dp.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <ripplerFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="BLACK" />
+                              <Stop color="BLACK" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </ripplerFill>
+                  </JFXButton>
+               </children>
+               <padding>
+                  <Insets top="45.0" />
+               </padding>
+            </VBox>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane prefHeight="40.0" prefWidth="1100.0" style="-fx-background-color: white;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label layoutX="1048.0" layoutY="12.0" text="Nombre" AnchorPane.rightAnchor="30.40000000000009" />
+               </children>
+            </AnchorPane>
+            <StackPane fx:id="stackDashboard" layoutY="40.0" prefHeight="640.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0">
+               <children>
+                  <AnchorPane styleClass="color-panel">
+                     <children>
+                        <JFXButton layoutX="123.0" layoutY="425.0" prefHeight="48.0" prefWidth="73.0" style="-fx-background-color: white;" text="hola" />
+                        <HBox layoutX="29.0" layoutY="575.0" prefHeight="30.0" prefWidth="116.0" style="-fx-background-color: black;" AnchorPane.rightAnchor="955.0" AnchorPane.topAnchor="575.0">
+                           <children>
+                              <JFXButton layoutX="60.0" layoutY="10.0" onAction="#minimize" prefHeight="30.0" prefWidth="50.0" style="-fx-text-fill: white; -fx-font-size: 27;" text="-">
+                                 <padding>
+                                    <Insets bottom="-5.0" top="-5.0" />
+                                 </padding>
+                              </JFXButton>
+                              <JFXButton onAction="#maximize" prefHeight="30.0" prefWidth="50.0" style="-fx-text-fill: white; -fx-font-size: 30;" text="▭">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                                 <padding>
+                                    <Insets bottom="-10.0" top="-10.0" />
+                                 </padding>
+                              </JFXButton>
+                              <JFXButton layoutX="10.0" layoutY="10.0" onAction="#exit" prefHeight="30.0" prefWidth="50.0" style="-fx-text-fill: white; -fx-font-size: 20;" text="x">
+                                 <padding>
+                                    <Insets bottom="-5.0" top="-10.0" />
+                                 </padding>
+                              </JFXButton>
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </StackPane>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

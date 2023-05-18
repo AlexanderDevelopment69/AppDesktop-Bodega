@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import io.github.palexdev.materialfx.controls.MFXScrollPane?>
+<?import io.github.palexdev.materialfx.controls.legacy.MFXLegacyTableView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+
+<AnchorPane fx:id="stackDashboard" stylesheets="@../Styles/Style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sfc.appdesktopbodega.Controller.Product.AddProductController">
+   <children>
+      <MFXScrollPane fitToHeight="true" fitToWidth="true" style="-fx-background-color: transparent;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <content>
+            <AnchorPane prefWidth="1100.0" styleClass="color-panel">
+               <children>
+                  <AnchorPane layoutX="14.0" layoutY="20.0" prefHeight="676.0" prefWidth="378.0" style="-fx-background-color: white;" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="20.0">
+                     <children>
+                        <Label layoutX="50.0" layoutY="142.0" prefHeight="44.0" prefWidth="250.0" style="-fx-background-radius: 5;" styleClass="color-panel">
+                           <graphic>
+                              <JFXTextField fx:id="code" focusColor="WHITE" labelFloat="true" opacity="0.8" prefHeight="38.0" promptText="Codigo de producto" styleClass="style-font-black" unFocusColor="WHITE">
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                              </JFXTextField>
+                           </graphic>
+                           <padding>
+                              <Insets right="20.0" />
+                           </padding>
+                        </Label>
+                        <Label layoutX="50.0" layoutY="219.0" prefHeight="44.0" prefWidth="250.0" style="-fx-background-radius: 5;" styleClass="color-panel">
+                           <graphic>
+                              <JFXTextField fx:id="product" focusColor="WHITE" labelFloat="true" opacity="0.8" prefHeight="38.0" promptText="Producto" styleClass="style-font-black" unFocusColor="WHITE">
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                              </JFXTextField>
+                           </graphic>
+                        </Label>
+                        <Label layoutX="50.0" layoutY="286.0" prefHeight="44.0" prefWidth="250.0" style="-fx-background-radius: 5;" styleClass="color-panel">
+                           <graphic>
+                              <JFXComboBox fx:id="cmCategory" editable="true" focusColor="WHITE" opacity="0.8" prefHeight="38.0" prefWidth="250.0" promptText="Categoria" style="-fx-prompt-text-fill: #797979;" styleClass="style-font-black" unFocusColor="WHITE">
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                              </JFXComboBox>
+                           </graphic>
+                        </Label>
+                        <Label layoutX="50.0" layoutY="365.0" prefHeight="44.0" prefWidth="250.0" style="-fx-background-radius: 5;" styleClass="color-panel">
+                           <graphic>
+                              <JFXTextField fx:id="brand" focusColor="WHITE" labelFloat="true" opacity="0.8" prefHeight="38.0" promptText="Marca" styleClass="style-font-black" unFocusColor="WHITE">
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                              </JFXTextField>
+                           </graphic>
+                           <padding>
+                              <Insets right="20.0" />
+                           </padding>
+                        </Label>
+                        <Label layoutX="50.0" layoutY="441.0" prefHeight="44.0" prefWidth="119.0" style="-fx-background-radius: 5;" styleClass="color-panel">
+                           <graphic>
+                              <JFXTextField fx:id="cost" focusColor="WHITE" labelFloat="true" opacity="0.8" prefHeight="38.0" promptText="Costo" styleClass="style-font-black" unFocusColor="WHITE">
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                              </JFXTextField>
+                           </graphic>
+                           <padding>
+                              <Insets right="20.0" />
+                           </padding>
+                        </Label>
+                        <Label layoutX="194.0" layoutY="441.0" prefHeight="44.0" prefWidth="104.0" style="-fx-background-radius: 5;" styleClass="color-panel">
+                           <graphic>
+                              <JFXTextField fx:id="price" focusColor="WHITE" labelFloat="true" opacity="0.8" prefHeight="38.0" promptText="Precio" styleClass="style-font-black" unFocusColor="WHITE">
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                              </JFXTextField>
+                           </graphic>
+                           <padding>
+                              <Insets right="20.0" />
+                           </padding>
+                        </Label>
+                        <Label layoutX="50.0" layoutY="523.0" prefHeight="44.0" prefWidth="250.0" style="-fx-background-radius: 5;" styleClass="color-panel">
+                           <graphic>
+                              <JFXTextField fx:id="image" editable="false" focusColor="WHITE" labelFloat="true" opacity="0.8" prefHeight="38.0" prefWidth="218.0" promptText="Imagen" styleClass="style-font-black" unFocusColor="WHITE">
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                              </JFXTextField>
+                           </graphic>
+                           <padding>
+                              <Insets right="70.0" />
+                           </padding>
+                        </Label>
+                        <JFXButton layoutX="228.0" layoutY="531.0" onAction="#uploadImage" style="-fx-text-fill: #BFBFBF; -fx-background-radius: 20;" text="Subir">
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Images/upload.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <Label fx:id="labelDescription" layoutX="50.0" layoutY="61.0" style="-fx-text-fill: #767E8C;" styleClass="style-font-black" text="Registrar nuevos productos " />
+                        <Label fx:id="labelDescription2" layoutX="50.0" layoutY="87.0" style="-fx-text-fill: #767E8C;" styleClass="style-font-black" text="Completar todos los campos correspondientes." />
+                        <JFXButton layoutX="84.0" layoutY="598.0" onAction="#addProduct" prefHeight="35.0" prefWidth="100.0" styleClass="buttonGeneral-estilo2" text="Registrar">
+                           <ripplerFill>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop color="#41e29f" />
+                                    <Stop color="#4fe87a" offset="0.007633587786259542" />
+                                    <Stop color="#262626" offset="0.9969465648854962" />
+                                    <Stop color="#72ed99" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </ripplerFill>
+                        </JFXButton>
+                        <JFXButton layoutX="196.0" layoutY="598.0" onAction="#cancel" prefHeight="35.0" prefWidth="100.0" styleClass="buttonGeneral-estilo1" text="Cancelar">
+                           <ripplerFill>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop color="#7f37ed" />
+                                    <Stop color="#7f37ed" offset="0.007633587786259542" />
+                                    <Stop color="#6035cd" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </ripplerFill>
+                        </JFXButton>
+                        <Label fx:id="labelTitle" layoutX="50.0" layoutY="30.0" style="-fx-font-size: 20;" styleClass="TEXT19-BLACK" text="PRODUCTOS" textFill="#4f4f4f" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="422.0" layoutY="20.0" prefHeight="676.0" prefWidth="790.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="530.0" AnchorPane.leftAnchor="422.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="20.0">
+                     <children>
+                        <Label layoutX="32.0" layoutY="25.0" styleClass="TEXT" text="Vista de Productos" AnchorPane.leftAnchor="32.0" />
+                        <JFXTextField fx:id="search" focusColor="WHITE" layoutX="32.0" layoutY="88.0" onKeyReleased="#searchProduct" opacity="0.8" prefHeight="38.0" prefWidth="464.0" promptText="Buscar" style="-fx-background-color: #F8F9FD;" styleClass="style-font-black" unFocusColor="WHITE" AnchorPane.leftAnchor="32.0" AnchorPane.rightAnchor="294.4000000000001" AnchorPane.topAnchor="88.0">
+                           <padding>
+                              <Insets left="11.0" />
+                           </padding>
+                        </JFXTextField>
+                        <JFXButton layoutX="666.0" layoutY="89.0" onAction="#deleteProduct" prefHeight="35.0" prefWidth="90.0" styleClass="buttonGeneral-estilo1" text="Eliminar" AnchorPane.rightAnchor="34.000000000000085" />
+                        <JFXButton layoutX="564.0" layoutY="89.0" onAction="#updateProduct" prefHeight="35.0" prefWidth="90.0" styleClass="buttonGeneral-estilo2" text="Actualizar" AnchorPane.rightAnchor="135.0" />
+                        <Label layoutX="32.0" layoutY="52.0" style="-fx-text-fill: #AFBCD1;" styleClass="style-font-black" text="Vista de todos los productos registrados hasta el momento." AnchorPane.leftAnchor="32.0" />
+                        <Label layoutX="32.0" layoutY="153.0" style="-fx-text-fill: #AFBCD1;" styleClass="style-font-black" text="Selecciona productos y modificalos." AnchorPane.leftAnchor="32.0" AnchorPane.topAnchor="153.0" />
+                        <ImageView fx:id="photo" fitHeight="147.0" fitWidth="170.0" layoutX="14.0" layoutY="508.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="21.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="507.3999999999999" />
+                        <StackPane layoutX="33.0" layoutY="183.0" prefHeight="250.0" prefWidth="724.0" AnchorPane.leftAnchor="33.0" AnchorPane.rightAnchor="33.0" AnchorPane.topAnchor="183.0">
+                           <children>
+                              <MFXLegacyTableView fx:id="productTable" minWidth="724.0" onMouseClicked="#selectionProduct">
+                                 <columns>
+                                    <TableColumn fx:id="tbCode" editable="false" maxWidth="55.0" minWidth="55.0" prefWidth="55.0" text="N" />
+                                    <TableColumn fx:id="tbCodeProduct" editable="false" prefWidth="107.20004272460938" text="CODIGO" />
+                                    <TableColumn fx:id="tbProduct" editable="false" prefWidth="165.5999755859375" text="PRODUCTO" />
+                                    <TableColumn fx:id="tbCategory" editable="false" minWidth="0.0" prefWidth="100.79998779296875" text="CATEGORIA" />
+                                    <TableColumn fx:id="tbBrand" editable="false" prefWidth="129.5999755859375" text="MARCA" />
+                                    <TableColumn fx:id="tbCost" editable="false" text="COSTO" />
+                                    <TableColumn fx:id="tbPrice" editable="false" prefWidth="84.7999267578125" text="PRECIO" />
+                                 </columns>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                              </MFXLegacyTableView>
+                           </children>
+                        </StackPane>
+                        <JFXButton layoutX="32.0" layoutY="449.0" prefHeight="35.0" prefWidth="102.0" style="-fx-background-color: #FF6347; -fx-background-radius: 0 0 0 0;" styleClass="style-font-white" text="Ver imagen" AnchorPane.bottomAnchor="191.8" AnchorPane.leftAnchor="32.0" AnchorPane.topAnchor="448.5999999999999" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="422.0" layoutY="725.0" prefHeight="500.0" prefWidth="790.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="422.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="725.0">
+                     <children>
+                        <JFXButton layoutX="59.0" layoutY="46.0" prefHeight="36.0" prefWidth="70.0" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </content>
+      </MFXScrollPane>
+   </children>
+</AnchorPane>

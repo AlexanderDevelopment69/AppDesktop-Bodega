@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXScrollPane?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" stylesheets="@../Styles/Style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sfc.appdesktopbodega.Controller.Product.MainProductController">
+   <children>
+      <HBox prefHeight="45.0" prefWidth="1100.0" style="-fx-background-color: white;" styleClass="style-font-black" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <MFXButton depthLevel="LEVEL0" minWidth="118.0" onMouseClicked="#dashboard" prefHeight="45.0" prefWidth="118.0" rippleBackgroundOpacity="1.0" rippleColor="#afffd6" rippleRadius="10.0" text="DASHBOARD" />
+            <MFXButton minWidth="166.0" onMouseClicked="#showProduct" prefHeight="45.0" prefWidth="166.0" rippleBackgroundOpacity="1.0" rippleColor="#afffd6" rippleRadius="10.0" text="VER PRODUCTOS" />
+            <MFXButton minWidth="161.0" onMouseClicked="#addProduct" prefHeight="45.0" prefWidth="161.0" rippleBackgroundOpacity="1.0" rippleColor="#afffd6" rippleRadius="10.0" text="AGREGAR PRODUCTOS" />
+            <MFXButton minWidth="166.0" onMouseClicked="#addCategory" prefHeight="45.0" prefWidth="166.0" rippleBackgroundOpacity="1.0" rippleColor="#afffd6" rippleRadius="10.0" text="AGREGAR CATEGORIAS" />
+            <MFXButton minWidth="166.0" prefHeight="45.0" prefWidth="166.0" rippleBackgroundOpacity="1.0" rippleColor="#afffd6" rippleRadius="10.0" text="VER CATEGORIAS" />
+            <MFXButton minWidth="166.0" onMouseClicked="#updateCategory" prefHeight="45.0" prefWidth="166.0" rippleBackgroundOpacity="1.0" rippleColor="#afffd6" rippleRadius="10.0" text="EDITAR CATEGORIAS" />
+         </children>
+         <padding>
+            <Insets left="45.0" />
+         </padding>
+      </HBox>
+      <AnchorPane fx:id="root" layoutY="45.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="45.0">
+         <children>
+            <MFXScrollPane fitToHeight="true" fitToWidth="true" style="-fx-background-color: transparent;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <content>
+                  <AnchorPane>
+                     <children>
+                        <Label fx:id="labelTitle" layoutX="50.0" layoutY="14.0" prefHeight="43.0" prefWidth="194.0" style="-fx-font-size: 22;" text="PRODUCTOS">
+                           <styleClass>
+                              <String fx:value="TEXT" />
+                              <String fx:value="color-panel" />
+                           </styleClass>
+                        </Label>
+                        <Label fx:id="labelDescription" layoutX="50.0" layoutY="48.0" prefHeight="26.0" prefWidth="218.0" style="-fx-text-fill: #767E8C;" styleClass="color-panel" text="Vista generia de productos." />
+                        <StackPane layoutX="50.0" layoutY="97.0" minWidth="947.0" prefHeight="130.0" prefWidth="947.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="354.79999999999995">
+                           <children>
+                              <Pane style="-fx-background-color: white;">
+                                 <children>
+                                    <Label layoutX="48.0" layoutY="90.0" opacity="0.35" prefWidth="140.0" styleClass="style-font-black" text="Cantidad de productos" />
+                                    <Label layoutX="71.0" layoutY="37.0" prefHeight="53.0" prefWidth="94.0" style="-fx-alignment: center; -fx-font-size: 30; -fx-text-fill: #585858;" styleClass="style-fontSemiBold-black" text="1200" />
+                                    <Label layoutX="256.0" layoutY="90.0" opacity="0.35" prefHeight="17.0" prefWidth="162.0" styleClass="style-font-black" text="Costo Total de Productos" />
+                                    <Label layoutX="279.0" layoutY="37.0" prefHeight="53.0" prefWidth="112.0" style="-fx-alignment: center; -fx-font-size: 30; -fx-text-fill: #585858;" styleClass="style-fontSemiBold-black" text="80000" />
+                                    <Label layoutX="490.0" layoutY="90.0" opacity="0.35" prefHeight="17.0" prefWidth="149.0" styleClass="style-font-black" text="Cantidad de Categorias" />
+                                    <Label layoutX="513.0" layoutY="37.0" prefHeight="53.0" prefWidth="94.0" style="-fx-alignment: center; -fx-font-size: 30; -fx-text-fill: #585858;" styleClass="style-fontSemiBold-black" text="12" />
+                                    <Label layoutX="725.0" layoutY="90.0" opacity="0.35" prefWidth="140.0" styleClass="style-font-black" text="Cantidad de Marcas" />
+                                    <Label layoutX="748.0" layoutY="37.0" prefHeight="53.0" prefWidth="94.0" style="-fx-alignment: center; -fx-font-size: 30; -fx-text-fill: #585858;" styleClass="style-fontSemiBold-black" text="7" />
+                                 </children>
+                              </Pane>
+                           </children>
+                        </StackPane>
+                        <StackPane layoutX="50.0" layoutY="247.0" prefHeight="326.0" prefWidth="524.0" style="-fx-background-color: white;" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="713.1999999999999">
+                           <children>
+                              <BarChart fx:id="barChart" legendSide="TOP" title="Productos">
+                                 <xAxis>
+                                    <CategoryAxis side="BOTTOM" fx:id="xAxis" />
+                                 </xAxis>
+                                 <yAxis>
+                                    <NumberAxis fx:id="yAxis" minorTickVisible="false" side="LEFT" upperBound="1000.0" />
+                                 </yAxis>
+                              </BarChart>
+                           </children>
+                        </StackPane>
+                        <StackPane layoutX="665.0" layoutY="247.0" minWidth="333.0" prefHeight="326.0" prefWidth="333.0" style="-fx-background-color: white;" AnchorPane.rightAnchor="355.0">
+                           <children>
+                              <PieChart fx:id="pieChartData" />
+                           </children></StackPane>
+                        <StackPane layoutX="1021.0" layoutY="97.0" prefHeight="478.0" prefWidth="330.0" style="-fx-background-color: white;" AnchorPane.rightAnchor="0.0" />
+                     </children>
+                     <styleClass>
+                        <String fx:value="color-panel" />
+                        <String fx:value="style-font-black" />
+                     </styleClass>
+                  </AnchorPane>
+               </content>
+            </MFXScrollPane>
+         </children>
+      </AnchorPane>
+      <JFXDrawer fx:id="drawer" defaultDrawerSize="300.0" direction="RIGHT" layoutX="1100.0" layoutY="45.0" overLayVisible="false" prefWidth="0.0" resizeContent="true" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="45.0" />
+   </children>
+</AnchorPane>

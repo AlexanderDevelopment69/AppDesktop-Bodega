@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+
+<BorderPane stylesheets="@../Styles/Style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sfc.appdesktopbodega.Controller.Login.LoginController">
+   <center>
+      <StackPane fx:id="stackPane" BorderPane.alignment="CENTER">
+         <children>
+            <Pane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="520.0" prefWidth="603.0">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="604.0" layoutY="436.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/desingLogin.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="255.0" layoutY="52.0" prefHeight="30.0" prefWidth="81.0" styleClass="TEXT" text="SIGN UP" />
+                  <Label layoutX="162.0" layoutY="92.0" prefHeight="17.0" prefWidth="309.0" text="Ingresar el usuario y contraseña correctamente" />
+                  <JFXTextField fx:id="username" focusColor="#6317cd" layoutX="170.0" layoutY="165.0" prefHeight="25.0" prefWidth="225.0" promptText="Usuario">
+                     <styleClass>
+                        <String fx:value="label-username" />
+                        <String fx:value="labelUsername" />
+                     </styleClass>
+                  </JFXTextField>
+                  <JFXPasswordField fx:id="password" focusColor="#6317cd" layoutX="170.0" layoutY="229.0" onKeyReleased="#ingresarKey" prefHeight="25.0" prefWidth="225.0" promptText="Contraseña">
+                     <styleClass>
+                        <String fx:value="label-password" />
+                        <String fx:value="labelPassword" />
+                     </styleClass>
+                  </JFXPasswordField>
+                  <JFXButton layoutX="247.0" layoutY="273.0" onAction="#recoveryUserPassword" prefHeight="25.0" prefWidth="156.0" style="-fx-text-fill: #01C192;" text="Recuperar contraseña" />
+                  <JFXButton fx:id="btnIngresar" layoutX="238.0" layoutY="346.0" onAction="#login" prefHeight="43.0" prefWidth="116.0" styleClass="button-Iniciar" text="Ingresar" />
+                  <JFXButton layoutX="238.0" layoutY="406.0" onAction="#exit" prefHeight="43.0" prefWidth="116.0" styleClass="button-Salir" text="Salir" />
+                  <ImageView fitHeight="74.0" fitWidth="229.0" layoutX="378.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/home_circle_icon_137496.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="126.0" fitWidth="234.0" layoutX="-129.0" layoutY="71.0" pickOnBounds="true" preserveRatio="true" rotate="-112.8">
+                     <image>
+                        <Image url="@../Images/home_circle_icon_137496.png" />
+                     </image>
+                  </ImageView>
+                  <JFXButton layoutX="170.0" layoutY="475.0" onAction="#signUp" prefHeight="25.0" prefWidth="295.0" style="-fx-text-fill: white;" text="No tienes cuenta. Registrar ahora una cuenta." />
+               </children>
+               <styleClass>
+                  <String fx:value="login-pane-root" />
+                  <String fx:value="style-font-white" />
+               </styleClass>
+            </Pane>
+         </children>
+      </StackPane>
+   </center>
+</BorderPane>

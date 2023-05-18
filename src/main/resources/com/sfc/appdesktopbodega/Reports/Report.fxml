@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.legacy.MFXLegacyTableView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+
+<AnchorPane prefHeight="556.0" prefWidth="585.0" style="-fx-background-color: white;" stylesheets="@../Styles/Style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sfc.appdesktopbodega.Controller.Reports.ReportController">
+   <children>
+      <Pane prefHeight="239.0" prefWidth="585.0" style="-fx-background-color: white;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="386.0" layoutY="14.0" prefHeight="37.0" prefWidth="179.0" style="-fx-font-size: 20; -fx-text-fill: #A1BCE3;" styleClass="style-fontSemiBold-black" text="BOLETA DE VENTA" />
+            <Label layoutX="34.0" layoutY="33.0" prefHeight="37.0" prefWidth="179.0" style="-fx-font-size: 20;" styleClass="style-fontSemiBold-black" text="EMPRESA XXY" />
+            <Label layoutX="76.0" layoutY="88.0" text="Label" />
+            <Label layoutX="34.0" layoutY="70.0" prefHeight="17.0" prefWidth="165.0" styleClass="style-font-black" text="Direccion : JR ROSALES 3456" />
+            <Label layoutX="34.0" layoutY="88.0" prefHeight="17.0" prefWidth="165.0" styleClass="style-font-black" text="Huancayo - Peru" />
+            <Label layoutX="475.0" layoutY="62.0" prefHeight="17.0" prefWidth="84.0" style="-fx-text-fill: #767E8C;" styleClass="style-font-black" text="001- N 000001" />
+            <Label layoutX="455.0" layoutY="45.0" prefHeight="17.0" prefWidth="102.0" style="-fx-text-fill: #767E8C;" styleClass="style-font-black" text="RUC : 1023233434" />
+            <AnchorPane layoutX="34.0" layoutY="144.0" prefHeight="84.0" prefWidth="525.0" style="-fx-background-color: #EFF4FD;">
+               <children>
+                  <Label layoutX="14.0" layoutY="14.0" prefHeight="18.0" prefWidth="271.0" style="-fx-text-fill: #566377;" styleClass="style-font-black" text="Señor(a) :  Alexander Bryan Onocc Navarro " />
+                  <Label layoutX="14.0" layoutY="33.0" prefHeight="18.0" prefWidth="271.0" style="-fx-text-fill: #566377;" styleClass="style-font-black" text="Direccion :  Jr la florida 839." />
+                  <Label layoutX="14.0" layoutY="53.0" prefHeight="18.0" prefWidth="271.0" style="-fx-text-fill: #566377;" styleClass="style-font-black" text="Fecha : 28/02/2022" />
+                  <Label layoutX="431.0" layoutY="14.0" prefHeight="18.0" prefWidth="84.0" style="-fx-text-fill: #566377;" styleClass="style-font-black" text="Dni : 74118606" />
+                  <Label layoutX="391.0" layoutY="33.0" prefHeight="18.0" prefWidth="121.0" style="-fx-text-fill: #566377;" styleClass="style-font-black" text="Ruc : 455563233444" />
+               </children>
+            </AnchorPane>
+            <Label layoutX="33.0" layoutY="105.0" prefHeight="18.0" prefWidth="113.0" style="-fx-font-size: 11;" styleClass="style-font-black" text="Celular : 9344344512" />
+         </children>
+      </Pane>
+      <StackPane layoutX="33.0" layoutY="239.0" prefHeight="348.0" prefWidth="525.0" visible="false">
+         <children>
+            <MFXLegacyTableView fx:id="saleTable" minHeight="-Infinity" minWidth="-Infinity" prefHeight="348.0" prefWidth="518.0">
+               <columns>
+                  <TableColumn fx:id="tbCodeProduct" editable="false" prefWidth="88.00003051757812" text="CANTIDAD" />
+                  <TableColumn fx:id="tbProduct" editable="false" prefWidth="179.19994354248047" text="PRODUCTO" />
+                  <TableColumn fx:id="tbPrice" editable="false" prefWidth="122.4000244140625" text="PRECIO UNITARIO" />
+                  <TableColumn fx:id="TbImport" editable="false" prefWidth="133.60003051757815" text="IMPORTE" />
+               </columns>
+            </MFXLegacyTableView>
+         </children>
+      </StackPane>
+      <Label layoutX="359.0" layoutY="449.0" opacity="0.59" prefHeight="38.0" prefWidth="84.0" style="-fx-font-size: 20;" styleClass="style-fontSemiBold-black" text="TOTAL:" />
+      <Label layoutX="458.0" layoutY="449.0" opacity="0.51" prefHeight="38.0" prefWidth="77.0" style="-fx-font-size: 20;" styleClass="style-fontSemiBold-black" text="S/. 9" />
+      <ImageView fitHeight="239.0" fitWidth="525.0" layoutX="33.0" layoutY="263.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/imagenVenta.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="102.0" layoutY="546.0" prefHeight="18.0" prefWidth="410.0" style="-fx-font-size: 11;" styleClass="style-font-black" text="Venta de productos de primera , nuestra tienda tiene los mejores precios." />
+   </children>
+</AnchorPane>

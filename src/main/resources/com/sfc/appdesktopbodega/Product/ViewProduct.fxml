@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import io.github.palexdev.materialfx.controls.MFXScrollPane?>
+<?import io.github.palexdev.materialfx.controls.legacy.MFXLegacyTableView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+
+<AnchorPane fx:id="root" minHeight="-Infinity" minWidth="-Infinity" stylesheets="@../Styles/Style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sfc.appdesktopbodega.Controller.Product.ViewProductController">
+   <children>
+      <MFXScrollPane fitToHeight="true" fitToWidth="true" style="-fx-background-color: transparent;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <content>
+            <AnchorPane prefWidth="1100.0" styleClass="color-panel">
+               <children>
+                  <AnchorPane layoutX="14.0" layoutY="20.0" prefHeight="684.0" prefWidth="1062.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="20.0">
+                     <children>
+                        <Label layoutX="32.0" layoutY="25.0" styleClass="TEXT" text="Catalogo de Productos" />
+                        <JFXTextField fx:id="search" focusColor="WHITE" layoutX="32.0" layoutY="88.0" onKeyReleased="#searchProduct" opacity="0.8" prefHeight="38.0" prefWidth="742.0" promptText="Buscar" style="-fx-background-color: #F8F9FD;" styleClass="style-font-black" unFocusColor="WHITE" AnchorPane.leftAnchor="32.0" AnchorPane.rightAnchor="304.0000000000001">
+                           <padding>
+                              <Insets left="35.0" />
+                           </padding>
+                        </JFXTextField>
+                        <JFXButton layoutX="820.0" layoutY="89.0" onAction="#exportDataExcel" prefHeight="35.0" prefWidth="120.0" styleClass="buttonGeneral-estilo2" text="Exportar a Excel" AnchorPane.rightAnchor="138.4000000000001" />
+                        <JFXButton layoutX="955.0" layoutY="89.0" prefHeight="35.0" prefWidth="90.0" styleClass="buttonGeneral-estilo1" text="Limpiar" AnchorPane.rightAnchor="35.0" />
+                        <Label layoutX="32.0" layoutY="52.0" style="-fx-text-fill: #AFBCD1;" styleClass="style-font-black" text="Vista de todos los productos registrados hasta el momento." />
+                        <Label layoutX="32.0" layoutY="153.0" style="-fx-text-fill: #AFBCD1;" styleClass="style-font-black" text="Encuentra todos los productos, busca por las primeras letras del productos y encuentralos muy facil." />
+                        <StackPane layoutX="32.0" layoutY="193.0" prefHeight="470.0" prefWidth="1014.0" AnchorPane.leftAnchor="32.0" AnchorPane.rightAnchor="32.0">
+                           <children>
+                              <MFXLegacyTableView fx:id="productTable" minWidth="1014.0" onMouseClicked="#selectionProduct" style="-fx-fixed-cell-size: 55;">
+                                 <columns>
+                                    <TableColumn fx:id="tbCode" editable="false" maxWidth="55.999996185302734" minWidth="55.19997787475586" prefWidth="55.19997787475586" text="N" />
+                                    <TableColumn fx:id="tbCodeProduct" editable="false" prefWidth="125.60003662109375" text="CODIGO" />
+                                    <TableColumn fx:id="tbProduct" editable="false" prefWidth="138.39996337890625" text="PRODUCTO" />
+                                    <TableColumn fx:id="tbCategory" editable="false" minWidth="0.0" prefWidth="133.60006713867188" text="CATEGORIA" />
+                                    <TableColumn fx:id="tbBrand" editable="false" prefWidth="132.00006103515625" text="MARCA" />
+                                    <TableColumn fx:id="tbCost" editable="false" minWidth="6.4000244140625" prefWidth="105.5999755859375" text="COSTO" />
+                                    <TableColumn fx:id="tbPrice" editable="false" minWidth="6.4000244140625" prefWidth="111.20003662109377" text="PRECIO" />
+                                    <TableColumn fx:id="tbUnid" editable="false" minWidth="6.4000244140625" prefWidth="111.20003662109377" text="UNIDADES" />
+                                    <TableColumn fx:id="tbProvider" editable="false" minWidth="6.4000244140625" prefWidth="143.20003662109377" text="PROVEEDOR" />
+                                 </columns>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                              </MFXLegacyTableView>
+                           </children>
+                        </StackPane>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="40.0" layoutY="97.0" opacity="0.7" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/search.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </content>
+      </MFXScrollPane>
+   </children>
+</AnchorPane>

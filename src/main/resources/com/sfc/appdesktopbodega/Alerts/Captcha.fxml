@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane fx:id="alertCaptcha" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="249.0" prefWidth="476.0" styleClass="login-pane-root" stylesheets="@../Styles/Style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sfc.appdesktopbodega.Controller.Login.Captcha.CaptchaController">
+   <children>
+      <Label layoutX="374.0" layoutY="218.0" prefHeight="26.0" prefWidth="76.0" style="-fx-font-size: 15;" styleClass="style-font-white" text="CAPTCHA" />
+      <JFXCheckBox fx:id="checkBox" checkedColor="#c00eea" layoutX="43.0" layoutY="118.0" prefHeight="36.0" prefWidth="150.0" styleClass="style-font-white" text="No soy un robot" />
+      <JFXTextField fx:id="captcha" layoutX="43.0" layoutY="33.0" prefHeight="54.0" prefWidth="142.0" style="-fx-font-size: 25;" styleClass="style-font-white" />
+      <ImageView fx:id="textImage" fitHeight="123.0" fitWidth="207.0" layoutX="243.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/capcha.jpeg" />
+         </image>
+      </ImageView>
+      <Label layoutX="14.0" layoutY="222.0" prefHeight="17.0" prefWidth="265.0" styleClass="style-font-white" text="Completar el campo con el texto siguiente" />
+      <JFXButton fx:id="btnIngresar" layoutX="357.0" layoutY="154.0" onAction="#submitCaptcha" prefHeight="36.0" prefWidth="93.0" styleClass="button-Iniciar" text="Enviar" />
+      <Label fx:id="notification" layoutX="43.0" layoutY="172.0" prefHeight="17.0" prefWidth="158.0" style="-fx-text-fill: #ff7f76;" styleClass="style-font-white" />
+   </children>
+</Pane>

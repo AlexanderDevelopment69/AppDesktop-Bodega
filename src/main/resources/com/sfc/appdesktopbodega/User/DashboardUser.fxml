@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import io.github.palexdev.materialfx.controls.MFXScrollPane?>
+<?import io.github.palexdev.materialfx.controls.legacy.MFXLegacyListView?>
+<?import io.github.palexdev.materialfx.controls.legacy.MFXLegacyTableView?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+
+<AnchorPane fx:id="root" minHeight="-Infinity" minWidth="-Infinity" stylesheets="@../Styles/Style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sfc.appdesktopbodega.Controller.User.DashboardUserController">
+   <children>
+      <MFXScrollPane fitToHeight="true" fitToWidth="true" style="-fx-background-color: transparent;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <content>
+            <AnchorPane styleClass="color-panel">
+               <children>
+                  <StackPane layoutX="50.0" layoutY="97.0">
+                     <children>
+                        <Pane prefHeight="110.0" prefWidth="206.0" style="-fx-background-color: white;">
+                           <children>
+                              <Label layoutX="43.0" layoutY="14.0" opacity="0.35" prefWidth="140.0" styleClass="style-font-black" text="Cantidad de Usuarios" />
+                              <Label fx:id="countUsers" layoutX="71.0" layoutY="37.0" prefHeight="53.0" prefWidth="94.0" style="-fx-alignment: center; -fx-font-size: 30; -fx-text-fill: #585858;" styleClass="style-fontSemiBold-black" />
+                              <ImageView fitHeight="35.0" fitWidth="37.0" layoutX="50.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Images/users-alt.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                     </children>
+                  </StackPane>
+                  <StackPane layoutX="300.0" layoutY="97.0">
+                     <children>
+                        <Pane prefHeight="110.0" prefWidth="206.0" style="-fx-background-color: white;">
+                           <children>
+                              <Label layoutX="50.0" layoutY="14.0" opacity="0.35" prefHeight="17.0" prefWidth="110.0" styleClass="style-font-black" text="Usuarios Activos" />
+                              <Label fx:id="countActiveUsers" layoutX="71.0" layoutY="37.0" prefHeight="53.0" prefWidth="94.0" style="-fx-alignment: center; -fx-font-size: 30; -fx-text-fill: #585858;" styleClass="style-fontSemiBold-black" />
+                              <ImageView fitHeight="35.0" fitWidth="37.0" layoutX="50.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Images/userActivate.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                     </children>
+                  </StackPane>
+                  <StackPane layoutX="548.0" layoutY="97.0">
+                     <children>
+                        <Pane prefHeight="110.0" prefWidth="206.0" style="-fx-background-color: white;">
+                           <children>
+                              <Label layoutX="38.0" layoutY="14.0" opacity="0.35" prefHeight="17.0" prefWidth="144.0" styleClass="style-font-black" text="Usuarios Desactivados" />
+                              <Label fx:id="countDesactivateUsers" layoutX="71.0" layoutY="37.0" prefHeight="53.0" prefWidth="94.0" style="-fx-alignment: center; -fx-font-size: 30; -fx-text-fill: #585858;" styleClass="style-fontSemiBold-black" />
+                              <ImageView fitHeight="35.0" fitWidth="37.0" layoutX="50.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Images/userDesactivate.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                     </children>
+                  </StackPane>
+                  <StackPane layoutX="797.0" layoutY="97.0">
+                     <children>
+                        <Pane prefHeight="110.0" prefWidth="206.0" style="-fx-background-color: white;">
+                           <children>
+                              <Label layoutX="50.0" layoutY="14.0" opacity="0.35" prefHeight="17.0" prefWidth="126.0" styleClass="style-font-black" text="Usuarios Bloqueados" />
+                              <Label fx:id="countBlockedUsers" layoutX="71.0" layoutY="37.0" prefHeight="53.0" prefWidth="94.0" style="-fx-alignment: center; -fx-font-size: 30; -fx-text-fill: #585858;" styleClass="style-fontSemiBold-black" />
+                              <ImageView fitHeight="35.0" fitWidth="37.0" layoutX="50.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Images/userDesactivate.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                     </children>
+                  </StackPane>
+                  <AnchorPane layoutX="50.0" layoutY="239.0" prefWidth="954.0" style="-fx-background-color: white;">
+                     <children>
+                        <Label layoutX="14.0" layoutY="18.0" opacity="0.64" prefHeight="20.0" prefWidth="77.0" style="-fx-font-size: 14;" styleClass="style-fontSemiBold-black" text="USUARIOS " />
+                        <Label layoutX="105.0" layoutY="19.0" opacity="0.58" prefHeight="18.0" prefWidth="242.0" style="-fx-text-fill: black; -fx-font-size: 11;" styleClass="style-font-black" text="Usuarios registrados y activos en el sistema" />
+                        <MFXLegacyTableView fx:id="userTable" layoutY="50.0" prefHeight="290.0" prefWidth="954.0">
+                           <columns>
+                              <TableColumn fx:id="tbCode" editable="false" prefWidth="62.39999008178711" text="CODIGO" />
+                              <TableColumn fx:id="tbDni" editable="false" prefWidth="100.79998779296875" text="DNI" />
+                              <TableColumn fx:id="tbNames" editable="false" minWidth="0.0" prefWidth="112.79998779296875" text="NOMBRES" />
+                              <TableColumn fx:id="tbLatNames" editable="false" prefWidth="135.2000274658203" text="APELLIDOS" />
+                              <TableColumn fx:id="tbRol" editable="false" minWidth="6.4000244140625" prefWidth="112.800048828125" text="ROL" />
+                              <TableColumn fx:id="tbState" editable="false" minWidth="6.4000244140625" prefWidth="91.20001220703125" text="ESTADO" />
+                              <TableColumn fx:id="tbFecha" editable="false" minWidth="0.0" prefWidth="145.5999755859375" text="FECHA" />
+                              <TableColumn fx:id="tbActions" prefWidth="190.39999999999998" text="ACCIONES" />
+                           </columns>
+                        </MFXLegacyTableView>
+                        <JFXTextField fx:id="search" focusColor="WHITE" layoutX="680.0" layoutY="9.0" onKeyReleased="#searchUser" opacity="0.8" prefHeight="34.0" prefWidth="260.0" promptText="Buscar" style="-fx-background-color: #F8F9FD;" styleClass="style-font-black" unFocusColor="WHITE">
+                           <padding>
+                              <Insets left="37.0" />
+                           </padding>
+                        </JFXTextField>
+                        <ImageView fitHeight="18.0" fitWidth="18.0" layoutX="688.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/search.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="50.0" layoutY="603.0" prefHeight="248.0" prefWidth="433.0" style="-fx-background-color: white;">
+                     <children>
+                        <MFXLegacyTableView fx:id="BlockedUserTable" layoutY="60.0" prefHeight="186.0" prefWidth="433.0">
+                           <columns>
+                              <TableColumn fx:id="tbBlockedDni" editable="false" minWidth="-Infinity" prefWidth="66.39999389648438" text="DNI" />
+                              <TableColumn fx:id="tbBlockedNames" editable="false" minWidth="-Infinity" prefWidth="149.60003662109375" text="NOMBRES" />
+                              <TableColumn fx:id="tbBlockedAttemps" editable="false" minWidth="-Infinity" prefWidth="89.5999755859375" text="INTENTOS " />
+                              <TableColumn fx:id="tbBlockedActions" minWidth="-Infinity" prefWidth="126.39998779296877" resizable="false" text="ACCIONES" />
+                           </columns>
+                        </MFXLegacyTableView>
+                        <Label layoutX="14.0" layoutY="8.0" opacity="0.64" prefHeight="20.0" prefWidth="179.0" style="-fx-text-fill: red; -fx-font-size: 14;" styleClass="style-fontSemiBold-black" text="USUARIOS BLOQUEADOS" />
+                        <Label layoutX="14.0" layoutY="32.0" opacity="0.58" prefHeight="17.0" prefWidth="338.0" style="-fx-text-fill: black; -fx-font-size: 11;" styleClass="style-font-black" text="Usuarios bloquedos por intentos fallidos de constraseñá" />
+                     </children>
+                  </AnchorPane>
+                  <Label fx:id="labelTitle" layoutX="50.0" layoutY="14.0" prefHeight="43.0" prefWidth="194.0" style="-fx-font-size: 22;" text="DASHBOARD">
+                     <styleClass>
+                        <String fx:value="TEXT" />
+                        <String fx:value="color-panel" />
+                     </styleClass>
+                  </Label>
+                  <Label fx:id="labelDescription" layoutX="50.0" layoutY="48.0" prefHeight="26.0" prefWidth="218.0" style="-fx-text-fill: #767E8C;" text="Vista administracion de usuarios">
+                     <styleClass>
+                        <String fx:value="color-panel" />
+                        <String fx:value="style-font-black" />
+                     </styleClass></Label>
+                  <AnchorPane layoutX="1036.0" layoutY="240.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="338.0" prefWidth="270.0" style="-fx-background-color: white;">
+                     <children>
+                        <Label layoutX="20.0" layoutY="15.0" opacity="0.69" prefHeight="26.0" prefWidth="128.0" styleClass="style-font-black" text="Usuarios conectados" />
+                        <MFXLegacyListView fx:id="listUser" depthLevel="LEVEL0" hideScrollBars="true" layoutY="60.0" prefHeight="279.0" prefWidth="270.0" />
+                     </children>
+                  </AnchorPane>
+               </children>
+               <padding>
+                  <Insets bottom="20.0" right="10.0" />
+               </padding>
+            </AnchorPane>
+         </content>
+      </MFXScrollPane>
+   </children>
+</AnchorPane>

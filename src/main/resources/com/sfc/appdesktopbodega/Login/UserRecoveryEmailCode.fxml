@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane fx:id="pane" prefHeight="312.0" prefWidth="411.0" stylesheets="@../Styles/Style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sfc.appdesktopbodega.Controller.Login.RecoveryPassword.UserRecoveryEmailCode">
+   <styleClass>
+      <String fx:value="login-pane-root" />
+      <String fx:value="style-font-white" />
+   </styleClass>
+   <children>
+      <ImageView fitHeight="54.0" fitWidth="49.0" layoutX="342.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/email.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="72.0" layoutY="56.0" styleClass="TEXT" text="Recuperar Contraseña" />
+      <Label layoutX="72.0" layoutY="83.0" prefHeight="18.0" prefWidth="234.0" text="Ingrese el codigo enviado a su correo." />
+      <JFXTextField fx:id="emailCode" focusColor="#6317cd" layoutX="72.0" layoutY="133.0" prefHeight="25.0" prefWidth="225.0" promptText="Codigo de verificacion">
+         <styleClass>
+            <String fx:value="label-username" />
+            <String fx:value="labelUsername" />
+         </styleClass>
+      </JFXTextField>
+      <JFXTextField fx:id="password" focusColor="#6317cd" layoutX="72.0" layoutY="188.0" prefHeight="25.0" prefWidth="225.0" promptText="Contraseña Nueva">
+         <styleClass>
+            <String fx:value="label-username" />
+            <String fx:value="labelUsername" />
+         </styleClass>
+      </JFXTextField>
+      <JFXButton layoutX="72.0" layoutY="245.0" onAction="#btnRecovery" prefHeight="43.0" prefWidth="116.0" styleClass="button-Iniciar" text="Cambiar" />
+   </children>
+</Pane>

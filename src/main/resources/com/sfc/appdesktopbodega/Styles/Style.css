@@ -1,0 +1,593 @@
+@font-face {
+
+    src: url('../Fonts/Poppins-Light.otf');
+}
+
+@font-face {
+    src: url('../Fonts/Poppins-Regular.otf');
+
+}
+@font-face {
+    src: url('../Fonts/Poppins-SemiBold.otf');
+
+}
+@font-face {
+    src: url('../Fonts/Axiforma-Medium.otf');
+
+}
+/*PANTALLA PRINCIPAL -LOGIN*/
+/*.styleTitle{*/
+/*    -fx-font-family:"Poppins Regular";*/
+/*}*/
+.style-Title{
+    -fx-font-family: "Axiforma-Medium";
+    -fx-text-fill: #575759;
+    -fx-font-size: 19;
+
+}
+.style-font-white{
+    -fx-font-family: "Poppins Light";
+    -fx-text-fill: white;
+
+}
+.style-font-black{
+    -fx-font-family: "Poppins Light";
+    -fx-text-fill: black;
+}
+.style-fontRegular-black{
+    -fx-font-family: "Poppins Regular";
+    -fx-text-fill: black;
+}
+.style-fontSemiBold-black{
+    -fx-font-family: "Poppins SemiBold";
+    -fx-text-fill: black;
+}
+.login-pane-root{
+    -fx-background-color: #2A2A2A;
+}
+
+/*CHECK BOX SYLE -------------*/
+/*Tamaño checkbox */
+.jfx-check-box .box{
+    -fx-pref-height: 25;
+    -fx-pref-width: 25;
+}
+/*Tamaño de check */
+/*.jfx-check-box .mark{*/
+/*    -fx-max-width: 25;*/
+/*    -fx-max-height: 20;*/
+/*}*/
+
+/*CHECK BOX SYLE -------------*/
+
+Pane Label{
+    -fx-text-fill: white;
+}
+
+
+/*.AnchorPane StackPane Pane Label{*/
+/*    -fx-text-fill: black;*/
+/*}*/
+
+StackPane Pane Label{
+    -fx-text-fill: white;
+}
+
+.label-password{
+    -fx-font-size: 13px;
+    -fx-text-fill: white;
+    -fx-prompt-text-fill:#CDCDCD;
+}
+.label-username {
+    -fx-font-size: 13px;
+    -fx-text-fill: white;
+    -fx-prompt-text-fill:#CDCDCD;
+
+
+
+
+    /* login texfields */
+
+}
+.labelUsername .input-line{
+    -fx-pref-height:2;
+}
+.labelPassword .input-line{
+    -fx-pref-height:2;
+}
+
+/* ----------------------------- */
+.AB .jfx-text-field
+{
+    -fx-highlight-fill: #4eb769; /*Green*/
+}
+
+
+AnchorPane JFXTextField , JFXPasswordField{
+
+    -fx-prompt-text-fill:#888888;
+}
+
+
+.menuUser JFXButton:hover{
+    -fx-background-color: #E8EAF6;
+}
+
+
+
+
+
+
+
+.button-Iniciar{
+    -fx-background-radius: 30px;
+    -fx-background-color: #6317CD ;
+    -fx-font-size: 13;
+    -fx-font-family: "Poppins Light";
+    -fx-text-fill: white;
+
+}
+.button-Salir{
+    -fx-background-radius: 30px;
+    -fx-background-color: #000000;
+    -fx-font-size: 13;
+    -fx-font-family: "Poppins Light";
+    -fx-text-fill: white;
+}
+
+.TEXT{
+    -fx-font-size: 19;
+    -fx-font-family: "Poppins Regular";
+}
+.TEXT19-BLACK{
+    -fx-font-size: 19;
+    -fx-text-fill: black;
+    -fx-font-family: "Poppins Regular";
+}
+/*DRAWER PANE SLIDER MENU */
+
+.jfx-hamburger StackPane {
+    -fx-background-color:#5F5DF0;
+}
+.jfx-drawer-side-pane {
+    -fx-background-color: transparent;
+
+}
+
+
+
+/*COMBOBOX STYLE */
+.jfx-combo-box {
+    -fx-text-inner-color: #5F5DF0;
+
+
+}
+.combo-box .cell:selected {
+    -fx-background-color: #817FF7;
+}
+
+.combo-box .cell:hover {
+    -fx-background-color: #817FF7;
+}
+.combo-box .arrow{
+    -fx-background-color:#817FF7;
+}
+
+/*.combo-box >.scroll-bar:horizontal, .scroll-bar:vertical{*/
+/*    -fx-background-color:transparent;*/
+/*    -fx-pref-width: 12;*/
+/*}*/
+
+/*.combo-box .scroll-bar:horizontal .track,*/
+/*.combo-box .scroll-bar:vertical .track{*/
+/*    -fx-background-color: transparent;*/
+/*    -fx-border-color: transparent;*/
+/*    -fx-background-radius: 0em;*/
+/*}*/
+/*.combo-box .scroll-bar:horizontal .thumb,*/
+/*.combo-box .scroll-bar:vertical .thumb {*/
+/*    -fx-background-color: #D3D3D3;*/
+/*    -fx-background-radius: 2.0em;*/
+
+
+/*}*/
+/*.combo-box.scroll-bar:horizontal .thumb:hover,*/
+/*.combo-box .scroll-bar:vertical .thumb:hover {*/
+/*    -fx-background-color: rgb(88, 88, 88);*/
+/*    -fx-background-radius: 2.0em;*/
+
+/*}*/
+/*.combo-box .increment-button, .decrement-button {*/
+/*    -fx-background-color: transparent;*/
+/*    -fx-border-color: transparent;*/
+
+/*}*/
+
+/*------------------------------------------*/
+
+
+/*CONTEX MENU STYLE */
+.context-menu {
+    -fx-background-color: #2A2A2A;
+    -fx-text-fill: white;
+    -fx-pref-width: 200;
+    -fx-padding: 15;
+
+}
+
+.menu-item .label {
+    -fx-text-fill: white;
+}
+.menu-item:hover, .menu-item:focused {
+    /*-fx-background-color: linear-gradient(to right, #da4453, #89216b);*/
+    /*-fx-background-color: linear-gradient(to right, #11998e, #38ef7d);*/
+    -fx-background-color: linear-gradient(to right, #4776e6, #8e54e9);
+}
+
+/*------------------------------------------------------------------------ */
+
+.combo-box-popup .list-view .jfx-list-cell:odd:selected .jfx-list-cell-container,
+.combo-box-popup .list-view .jfx-list-cell:even:selected .jfx-list-cell-container {
+    -fx-background-color: red;
+}
+
+
+
+/*.mfx-label {*/
+/*    -mfx-line-color: #644EFF;*/
+/*    -mfx-unfocused-line-color: WHITE;*/
+/*    -mfx-text-fill: BLACK;*/
+
+/*    -fx-background-color: transparent;*/
+/*    -fx-background-radius: 4 4 0 0;*/
+
+/*}*/
+
+
+.roots .input-line{
+    -fx-pref-height: 0px;
+}
+.roots .input-focused-line{
+    -fx-pref-height: 0px;
+}
+
+
+/*------------------------------------- */
+.color-panel{
+    -fx-background-color:#F8F9FD;
+
+}
+
+/*-----SNACKBAR STYLE-------------------------------*/
+.jfx-snackbar-content{
+    -fx-background-color: #2A2A2A;
+
+}
+.jfx-snackbar-toast{
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+    -fx-text-alignment: right;
+    -fx-font-family: "Poppins Light";
+}
+/*-------------------------------------------*/
+
+
+/*------ERROR TEXTFIELD------------- */
+.error-label {
+    -fx-font-family: "Poppins SemiBold";
+    -fx-text-fill: #FD433E;
+    -fx-font-size: 10;
+
+}
+/*------------------------------------- */
+
+/* Menu TOP*/
+.menu-top JFXButton{
+
+    -fx-background-radius: 0px;
+}
+.menu-top JFXButton:hover{
+    -fx-border-width: 2.5 0 0 0;
+    -fx-border-color: #5900FF;
+}
+
+/* Menu LEFT*/
+.menu-left JFXButton{
+
+    -fx-background-radius: 0px;
+}
+.menu-left JFXButton:hover{
+    -fx-border-width: 0 0 0 2.5;
+    -fx-border-color: #5900FF;
+
+}
+
+
+
+/*Diseño button general dashboard*/
+.buttonGeneral-estilo1{
+    -fx-font-family: "Poppins Light";
+    -fx-background-color:  black;
+    -fx-text-fill: white;
+    -fx-background-radius: 0 0 0 0;
+}
+.buttonGeneral-estilo2{
+    -fx-font-family: "Poppins Light";
+    -fx-background-color:  #817FF7;
+    -fx-text-fill: white;
+    -fx-background-radius: 0 0 0 0;
+
+}
+.buttonGeneral-estilo3{
+    -fx-background-color:  transparent;
+    -fx-border-color: black;
+    -fx-text-fill: black;
+
+}
+.buttonGeneral-estilo4{
+    -fx-background-color:  transparent;
+    -fx-border-color: #6317CD;
+    -fx-text-fill:  #6317CD;
+
+}
+
+
+MFXLegacyTableView {
+    -fx-border-color: white;
+    -fx-fixed-cell-size: 40px;
+    -fx-font-family: "Poppins Light";
+
+
+}
+MFXLegacyTableView  .column-header {
+    -fx-border-color:transparent;
+    -fx-background-color:#F8F9FD;
+    -fx-font-family: "Poppins Regular";
+    -fx-text-fill : #717171;
+    -fx-padding : 15 5 20 5 ;
+
+}
+MFXLegacyTableView .table-column {
+    -fx-alignment: center;
+
+}
+MFXLegacyTableView .mfx-legacy-table-row {
+    /*-mfx-hover-color: #D6FEDD;*/
+
+}
+
+MFXLegacyListView {
+    -fx-font-family: "Poppins light";
+
+}
+
+
+
+
+
+/* Remove spacing */
+.pagination > .pagination-control > .control-box {
+    -fx-spacing: 0;
+    -fx-font-size: 10;
+    -fx-font-family: "Poppins Light";
+}
+
+/* You can control the actual button sizes here */
+.pagination > .pagination-control > .control-box > .number-button,
+.pagination > .pagination-control > .control-box > .bullet-button,
+.pagination > .pagination-control > .control-box > .left-arrow-button,
+.pagination > .pagination-control > .control-box > .right-arrow-button {
+    -fx-background-insets: 0, 1;
+    -fx-background-color: white, #FAFAFA;
+    -fx-min-width: 40;
+    -fx-min-height: 30;
+}
+
+/* Colors on hover */
+.pagination > .pagination-control > .control-box > .number-button:hover,
+.pagination > .pagination-control > .control-box > .bullet-button:hover,
+.pagination > .pagination-control > .control-box > .left-arrow-button:hover,
+.pagination > .pagination-control > .control-box > .right-arrow-button:hover {
+    -fx-background-insets: 0;
+    -fx-background-color: lightgray;
+}
+
+/* Selected toggle color */
+.pagination > .pagination-control > .control-box > .number-button:selected,
+.pagination > .pagination-control > .control-box > .bullet-button:selected{
+    -fx-background-insets: 0;
+    -fx-background-color: #5F4AF3;
+    -fx-text-fill: white;
+}
+
+
+
+
+
+/*.button-registrarCuenta{*/
+/*    -fx-background-radius: 0px;*/
+/*    -fx-background-color: transparent;*/
+/*    -fx-font-size: 12;*/
+/*    -fx-font-family: "Poppins Light";*/
+/*    -fx-text-fill:white;*/
+
+/*}*/
+/*.button-registrarCuenta:hover{*/
+/*    -fx-background-radius: 0px;*/
+/*    -fx-background-color: transparent;*/
+/*    -fx-font-size: 12;*/
+/*    -fx-font-family: "Poppins Light";*/
+/*    -fx-text-fill:white;*/
+/*}*/
+
+
+
+/*JFXListView{*/
+/*    -fx-background-color: transparent;*/
+/*    -fx-pref-height:226 ;*/
+/*    -fx-pref-width:220 ;*/
+
+/*}*/
+/*JFXListCell{*/
+/*    -fx-background-color:#555555 ;*/
+/*    -fx-text-fill: white;*/
+/*}*/
+/*JFXListCell:hover{*/
+/*        -fx-background-color:#5F4AF3 ;*/
+/*}*/
+
+.jfx-popup-container
+{
+    -fx-background-color: transparent;
+}
+
+.jfx-popup-container .jfx-list-view
+{
+    -fx-background-color: BLACK;
+    /*-fx-pref-width: 170px;*/
+    -fx-background-insets: 0 0 0 0;
+}
+.jfx-popup-container .jfx-list-view .jfx-list-cell
+{
+    -fx-background-color:BLACK;
+        -fx-text-fill: white;
+}
+.jfx-popup-container .jfx-list-view .jfx-list-cell:hover{
+    -fx-background-color:#5F4AF3 ;
+}
+
+
+
+
+
+/* BAR CHART STYLE ----------------------------------------*/
+
+.chart-bar {
+    /*-fx-bar-fill: linear-gradient(to top, #4776e6, #8e54e9);*/
+    -fx-background-color:  linear-gradient(to top, #b24592, #f15f79);
+    -fx-border-color: transparent;
+
+}
+
+
+
+
+
+
+/*.chart {*/
+/*    -fx-padding: 10px;*/
+/*    -fx-background-image: url("icon.png");*/
+/*}*/
+/*.chart-content {*/
+/*    -fx-padding: 30px;*/
+/*}*/
+
+.chart-title {
+    -fx-text-fill: rgb(54, 56, 77);
+    -fx-font-size: 18;
+    /*-fx-padding: 10 450 20 10;*/
+    -fx-font-family: "Poppins Regular";
+
+}
+
+.axis {
+
+    -fx-tick-label-fill:   linear-gradient(to top, #b24592, #f15f79);
+
+}
+
+
+
+.chart-legend {
+    -fx-background-color:  transparent;
+    -fx-padding: 0px;
+}
+
+.chart-legend-item-symbol{
+    -fx-background-radius: 0;
+}
+
+.chart-legend-item{
+    -fx-text-fill:  linear-gradient(to top, #b24592, #f15f79);
+}
+
+.chart-plot-background {
+    -fx-background-color: transparent;
+}
+.chart-vertical-grid-lines {
+    -fx-stroke: transparent;
+}
+.chart-horizontal-grid-lines {
+    -fx-stroke: transparent;
+}
+.chart-alternative-row-fill {
+    -fx-fill: transparent;
+    -fx-stroke: transparent;
+    -fx-stroke-width: 0;
+}
+
+
+
+
+
+.mfx-toggle-button {
+    -mfx-main: #6eff9a;
+    -mfx-secondary:#ff7f76;
+
+    -fx-padding: 10;
+
+
+}
+.mfx-toggle-button .line {
+    -fx-stroke-line-cap: ROUND;
+    -fx-opacity: 0.9;
+}
+
+
+
+
+
+
+/*---------------------------------------------------------*/
+
+
+/*JFXListView> .virtual-flow > .scroll-bar,*/
+/*JFXListView > .virtual-flow > .scroll-bar .decrement-arrow,*/
+/*JFXListView > .virtual-flow > .scroll-bar .increment-arrow,*/
+/*JFXListView > .virtual-flow > .scroll-bar .decrement-button,*/
+/*JFXListView > .virtual-flow > .scroll-bar .increment-button {*/
+/*    -fx-pref-width: 0;*/
+/*    -fx-pref-height: 0;*/
+/*}*/
+
+/*JFXListView .scroll-bar:vertical .thumb {*/
+/*    -fx-background-insets: 0 2 0 0;*/
+/*}*/
+
+/*JFXListView .scroll-bar:horizontal .thumb {*/
+/*    -fx-background-insets: 0 0 2 0;*/
+/*}*/
+
+/*JFXListView .scroll-bar .decrement-arrow,*/
+/*JFXListView .scroll-bar .increment-arrow {*/
+/*    -fx-pref-width: 0;*/
+/*    -fx-pref-height: 0;*/
+/*}*/
+
+/*JFXListView .scroll-bar {*/
+/*    -fx-background-color: transparent;*/
+/*    -fx-pref-width: 12;*/
+/*    -fx-pref-height: 12;*/
+/*    -fx-padding: 2;*/
+/*}*/
+
+/*JFXListView .scroll-bar .thumb {*/
+/*    -fx-background-color: rgba(0, 0, 0, .2);*/
+/*    -fx-background-radius: 1000;*/
+/*    -fx-pref-width: 12;*/
+/*    -fx-pref-height: 12;*/
+/*}*/
+
+
+
+

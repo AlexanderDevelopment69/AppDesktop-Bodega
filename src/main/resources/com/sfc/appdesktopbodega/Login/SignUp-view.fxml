@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+
+<BorderPane stylesheets="@../Styles/Style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sfc.appdesktopbodega.Controller.Login.SignUp.SignUpController">
+   <center>
+      <StackPane fx:id="stackPane" BorderPane.alignment="CENTER">
+         <children>
+            <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="520.0" prefWidth="603.0">
+               <children>
+                  <Label layoutX="255.0" layoutY="52.0" prefHeight="30.0" prefWidth="81.0" styleClass="TEXT" text="SIGN UP" />
+                  <Label layoutX="134.0" layoutY="92.0" prefHeight="17.0" prefWidth="367.0" text="Comple con sus datos correctos para crear la nueva cuenta" />
+                  <JFXTextField fx:id="dni" focusColor="#6317cd" labelFloat="true" layoutX="171.0" layoutY="158.0" prefHeight="25.0" prefWidth="225.0" promptText="Dni">
+                     <styleClass>
+                        <String fx:value="label-username" />
+                        <String fx:value="labelUsername" />
+                     </styleClass>
+                  </JFXTextField>
+                  <JFXTextField fx:id="email" focusColor="#6317cd" labelFloat="true" layoutX="171.0" layoutY="223.0" prefHeight="25.0" prefWidth="225.0" promptText="Correo electronico">
+                     <styleClass>
+                        <String fx:value="label-username" />
+                        <String fx:value="labelUsername" />
+                     </styleClass>
+                  </JFXTextField>
+                  <JFXPasswordField fx:id="password" focusColor="#6317cd" labelFloat="true" layoutX="171.0" layoutY="286.0" onKeyReleased="#ingresarKey" prefHeight="25.0" prefWidth="225.0" promptText="Contraseña">
+                     <styleClass>
+                        <String fx:value="label-password" />
+                        <String fx:value="labelPassword" />
+                     </styleClass>
+                  </JFXPasswordField>
+                  <JFXPasswordField fx:id="repeatPassword" focusColor="#6317cd" labelFloat="true" layoutX="171.0" layoutY="350.0" prefHeight="25.0" prefWidth="225.0" promptText="Repita la contraseñá">
+                     <styleClass>
+                        <String fx:value="label-password" />
+                        <String fx:value="labelPassword" />
+                     </styleClass>
+                  </JFXPasswordField>
+                  <JFXButton fx:id="btnIngresar" layoutX="171.0" layoutY="441.0" onAction="#signUP" prefHeight="43.0" prefWidth="116.0" styleClass="button-Iniciar" text="Registrar" />
+                  <JFXButton layoutX="302.0" layoutY="441.0" onAction="#cancel" prefHeight="43.0" prefWidth="116.0" styleClass="button-Salir" text="Cancelar" />
+               </children>
+               <styleClass>
+                  <String fx:value="login-pane-root" />
+                  <String fx:value="style-font-white" />
+               </styleClass>
+            </Pane>
+         </children>
+      </StackPane>
+   </center>
+</BorderPane>

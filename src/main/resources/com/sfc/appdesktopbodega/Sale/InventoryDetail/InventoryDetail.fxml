@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sfc.appdesktopbodega.Controller.Sale.InventoryDetail.InventoryDetailController">
+   <children>
+      <AnchorPane prefHeight="657.0" prefWidth="345.0" style="-fx-background-color: white;" stylesheets="@../../Styles/Style.css">
+         <children>
+            <Label fx:id="labelTitle11" layoutX="30.0" layoutY="20.0" style="-fx-font-size: 17;" styleClass="TEXT19-BLACK" text="Detalles de almacen" textFill="#4f4f4f" />
+            <Label layoutX="30.0" layoutY="50.0" style="-fx-text-fill: #767E8C;" styleClass="style-font-black" text="Detalles de stock de productos en almacen." />
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="77.0" layoutY="80.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Images/shield-check.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="30.0" layoutY="273.0" style="-fx-text-fill: #767E8C;" styleClass="style-font-black" text="Codigo" />
+            <Label layoutX="30.0" layoutY="328.0" style="-fx-text-fill: #767E8C;" styleClass="style-font-black" text="Producto" />
+            <Label layoutX="30.0" layoutY="381.0" style="-fx-text-fill: #767E8C;" styleClass="style-font-black" text="Categoria" />
+            <Label layoutX="30.0" layoutY="439.0" style="-fx-text-fill: #767E8C;" styleClass="style-font-black" text="Marca" />
+            <Label layoutX="30.0" layoutY="488.0" style="-fx-text-fill: #767E8C;" styleClass="style-font-black" text="Costo" />
+            <Label layoutX="30.0" layoutY="543.0" style="-fx-text-fill: #767E8C;" styleClass="style-font-black" text="Precio" />
+            <Label layoutX="30.0" layoutY="596.0" style="-fx-text-fill: #767E8C;" styleClass="style-font-black" text="Stock" />
+            <Label layoutX="120.0" layoutY="260.0" prefHeight="44.0" prefWidth="190.0" style="-fx-background-radius: 5;" styleClass="color-panel">
+               <graphic>
+                  <JFXTextField fx:id="code" focusColor="WHITE" opacity="0.8" prefHeight="44.0" promptText="Codigo" styleClass="style-font-black" unFocusColor="WHITE">
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </JFXTextField>
+               </graphic>
+               <padding>
+                  <Insets right="20.0" />
+               </padding>
+            </Label>
+            <Label layoutX="120.0" layoutY="313.0" prefHeight="44.0" prefWidth="190.0" style="-fx-background-radius: 5;" styleClass="color-panel">
+               <graphic>
+                  <JFXTextField fx:id="product" focusColor="WHITE" opacity="0.8" prefHeight="44.0" promptText="Producto" styleClass="style-font-black" unFocusColor="WHITE">
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </JFXTextField>
+               </graphic>
+               <padding>
+                  <Insets right="20.0" />
+               </padding>
+            </Label>
+            <Label layoutX="120.0" layoutY="368.0" prefHeight="44.0" prefWidth="190.0" style="-fx-background-radius: 5;" styleClass="color-panel">
+               <graphic>
+                  <JFXTextField fx:id="category" focusColor="WHITE" opacity="0.8" prefHeight="44.0" promptText="Categoria" styleClass="style-font-black" unFocusColor="WHITE">
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </JFXTextField>
+               </graphic>
+               <padding>
+                  <Insets right="20.0" />
+               </padding>
+            </Label>
+            <Label layoutX="120.0" layoutY="423.0" prefHeight="44.0" prefWidth="190.0" style="-fx-background-radius: 5;" styleClass="color-panel">
+               <graphic>
+                  <JFXTextField fx:id="brand" focusColor="WHITE" opacity="0.8" prefHeight="44.0" promptText="Marca" styleClass="style-font-black" unFocusColor="WHITE">
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </JFXTextField>
+               </graphic>
+               <padding>
+                  <Insets right="20.0" />
+               </padding>
+            </Label>
+            <Label layoutX="120.0" layoutY="476.0" prefHeight="44.0" prefWidth="100.0" style="-fx-background-radius: 5;" styleClass="color-panel">
+               <graphic>
+                  <JFXTextField fx:id="cost" focusColor="WHITE" opacity="0.8" prefHeight="44.0" promptText="Costo" styleClass="style-font-black" unFocusColor="WHITE">
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </JFXTextField>
+               </graphic>
+               <padding>
+                  <Insets right="20.0" />
+               </padding>
+            </Label>
+            <Label layoutX="120.0" layoutY="529.0" prefHeight="44.0" prefWidth="100.0" style="-fx-background-radius: 5;" styleClass="color-panel">
+               <graphic>
+                  <JFXTextField fx:id="price" focusColor="WHITE" opacity="0.8" prefHeight="44.0" promptText="Precio" styleClass="style-font-black" unFocusColor="WHITE">
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </JFXTextField>
+               </graphic>
+               <padding>
+                  <Insets right="20.0" />
+               </padding>
+            </Label>
+            <Label layoutX="120.0" layoutY="584.0" prefHeight="44.0" prefWidth="100.0" style="-fx-background-radius: 5;" styleClass="color-panel">
+               <graphic>
+                  <JFXTextField fx:id="stock" focusColor="WHITE" opacity="0.8" prefHeight="44.0" promptText="Stock" styleClass="style-font-black" unFocusColor="WHITE">
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </JFXTextField>
+               </graphic>
+               <padding>
+                  <Insets right="20.0" />
+               </padding>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

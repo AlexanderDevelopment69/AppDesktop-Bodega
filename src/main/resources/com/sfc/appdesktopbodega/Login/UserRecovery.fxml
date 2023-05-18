@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane fx:id="pane" prefHeight="450.0" prefWidth="460.0" stylesheets="@../Styles/Style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sfc.appdesktopbodega.Controller.Login.RecoveryPassword.UserRecoveryController">
+   <children>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="260.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/home_circle_icon_137496.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="89.0" layoutY="51.0" styleClass="TEXT" text="Recuperar Contraseña" />
+      <Label layoutX="89.0" layoutY="80.0" text="Ingresa el codigo de recuperacion " />
+      <JFXPasswordField fx:id="password" focusColor="#6317cd" layoutX="93.0" layoutY="289.0" onKeyPressed="#ingresarKey" prefHeight="25.0" prefWidth="225.0" promptText="Contraseña Nueva" styleClass="label-password" />
+      <JFXButton layoutX="161.0" layoutY="375.0" onAction="#btnRecovery" prefHeight="43.0" prefWidth="116.0" styleClass="button-Iniciar" text="Recuperar" />
+      <JFXTextField fx:id="code" focusColor="#6317cd" layoutX="93.0" layoutY="211.0" prefHeight="25.0" prefWidth="225.0" promptText="Codigo de recuperacion">
+         <styleClass>
+            <String fx:value="label-username" />
+            <String fx:value="labelUsername" />
+         </styleClass>
+      </JFXTextField>
+      <JFXTextField fx:id="username" focusColor="#6317cd" layoutX="93.0" layoutY="146.0" prefHeight="25.0" prefWidth="225.0" promptText="Usuario">
+         <styleClass>
+            <String fx:value="label-username" />
+            <String fx:value="labelUsername" />
+         </styleClass>
+      </JFXTextField>
+   </children>
+   <styleClass>
+      <String fx:value="login-pane-root" />
+      <String fx:value="style-font-white" />
+   </styleClass>
+</Pane>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXProgressBar?>
+<?import io.github.palexdev.materialfx.controls.MFXScrollPane?>
+<?import io.github.palexdev.materialfx.controls.MFXToggleButton?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+
+<AnchorPane fx:id="stackDashboard" minHeight="-Infinity" minWidth="-Infinity" stylesheets="@../Styles/Style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sfc.appdesktopbodega.Controller.Configuration.ConfigurationController">
+   <children>
+      <MFXScrollPane fx:id="scrollPaneV" fitToHeight="true" fitToWidth="true" maxHeight="-Infinity" maxWidth="-Infinity" style="-fx-background-color: transparent;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <content>
+            <AnchorPane prefHeight="640.0" prefWidth="1100.0" stylesheets="@../Styles/Style.css">
+               <children>
+                  <StackPane layoutX="40.0" layoutY="476.0" prefHeight="142.0" prefWidth="266.0" style="-fx-background-color: WHITE;">
+                     <children>
+                        <Pane style="-fx-background-color: white;">
+                           <children>
+                              <Label alignment="TOP_LEFT" layoutX="55.0" layoutY="21.0" styleClass="style-font-black" text="Estado de seguridad" />
+                              <ImageView fitHeight="48.0" fitWidth="49.0" layoutX="93.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Images/shield-check.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                     </children>
+                  </StackPane>
+                  <StackPane layoutX="597.0" layoutY="238.0" prefHeight="380.0" prefWidth="266.0">
+                     <children>
+                        <Pane style="-fx-background-color: WHITE;">
+                           <children>
+                              <Label layoutX="29.0" layoutY="14.0" prefHeight="24.0" prefWidth="99.0" style="-fx-font-size: 14;" styleClass="style-font-black" text="Controles" />
+                              <MFXToggleButton fx:id="toggleCaptcha" contentDisplay="RIGHT" layoutX="40.0" layoutY="62.0" onAction="#togglebCatpcha" prefHeight="58.0" prefWidth="180.0" text="Activar Captcha">
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets></MFXToggleButton>
+                              <MFXToggleButton fx:id="toggleAutentification" contentDisplay="RIGHT" layoutX="40.0" layoutY="108.0" onAction="#togglebAutentification" prefHeight="58.0" prefWidth="211.0" text="Doble autentificacion" />
+                              <MFXToggleButton fx:id="toggleBackup" contentDisplay="RIGHT" layoutX="41.0" layoutY="157.0" onAction="#togglebBackup" prefHeight="58.0" prefWidth="214.0" text="Backups automaticos" />
+                              <MFXToggleButton contentDisplay="RIGHT" layoutX="43.0" layoutY="203.0" prefHeight="58.0" prefWidth="180.0" text="Activar Captcha" />
+                              <MFXToggleButton contentDisplay="RIGHT" layoutX="42.0" layoutY="249.0" prefHeight="58.0" prefWidth="180.0" text="Activar Captcha" />
+                              <MFXButton layoutX="172.0" layoutY="337.0" prefHeight="35.0" prefWidth="76.0" style="-fx-background-color: #615FF5; -fx-text-fill: white;" text="Guardar" />
+                              <Label layoutX="29.0" layoutY="38.0" prefHeight="24.0" prefWidth="155.0" style="-fx-font-size: 11; -fx-text-fill: #585858;" text="Controles de Activacion " />
+                           </children>
+                        </Pane>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="stackPane" layoutX="317.0" layoutY="238.0" prefHeight="380.0" prefWidth="266.0">
+                     <children>
+                        <Pane style="-fx-background-color: WHITE;">
+                           <children>
+                              <Label layoutX="29.0" layoutY="14.0" prefHeight="24.0" prefWidth="99.0" style="-fx-font-size: 14;" styleClass="style-font-black" text="Parametros" />
+                              <Label layoutX="29.0" layoutY="38.0" prefHeight="24.0" prefWidth="216.0" style="-fx-font-size: 11; -fx-text-fill: #585858;" text="Actualizar la configuracion " />
+                              <Label layoutX="28.0" layoutY="75.0" prefHeight="17.0" prefWidth="114.0" styleClass="style-font-black" text="Intentos de sesion" />
+                              <Label layoutX="159.0" layoutY="62.0" prefHeight="44.0" prefWidth="83.0" style="-fx-background-color: #FCFCFC; -fx-background-radius: 5;" />
+                              <JFXTextField fx:id="addAttemps" focusColor="WHITE" layoutX="173.0" layoutY="67.0" opacity="0.8" prefHeight="34.0" prefWidth="63.0" promptText="intentos" unFocusColor="WHITE" />
+                              <Label layoutX="11.0" layoutY="130.0" prefHeight="17.0" prefWidth="133.0" styleClass="style-font-black" text="Tiempo de inactividad" />
+                              <Label layoutX="161.0" layoutY="116.0" prefHeight="44.0" prefWidth="83.0" style="-fx-background-color: #FCFCFC; -fx-background-radius: 5;" />
+                              <JFXTextField fx:id="addActivityTime" focusColor="WHITE" layoutX="175.0" layoutY="121.0" opacity="0.8" prefHeight="34.0" prefWidth="63.0" promptText="tiempo" unFocusColor="WHITE" />
+                              <Label layoutX="41.0" layoutY="184.0" prefHeight="17.0" prefWidth="103.0" styleClass="style-font-black" text="Hora de backups" />
+                              <Label layoutX="161.0" layoutY="170.0" prefHeight="44.0" prefWidth="83.0" style="-fx-background-color: #FCFCFC; -fx-background-radius: 5;" />
+                              <JFXTextField focusColor="WHITE" layoutX="175.0" layoutY="175.0" opacity="0.8" prefHeight="34.0" prefWidth="63.0" promptText="hora" unFocusColor="WHITE" />
+                              <MFXButton layoutX="169.0" layoutY="339.0" onAction="#saveControls" prefHeight="35.0" prefWidth="76.0" style="-fx-background-color: #615FF5; -fx-text-fill: white;" text="Guardar" />
+                              <Label layoutX="45.0" layoutY="232.0" prefHeight="17.0" prefWidth="96.0" styleClass="style-font-black" text="Backup Manual" />
+                              <MFXButton layoutX="161.0" layoutY="225.0" onAction="#saveBackup" prefHeight="30.0" prefWidth="63.0" style="-fx-background-color: #44546A; -fx-text-fill: white; -fx-font-size: 11;" text="Guardar" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </StackPane>
+                  <StackPane layoutX="598.0" layoutY="87.0" prefHeight="142.0" prefWidth="266.0" style="-fx-background-color: WHITE;">
+                     <children>
+                        <Pane style="-fx-background-color: white;">
+                           <children>
+                              <Label alignment="TOP_LEFT" layoutX="73.0" layoutY="14.0" text="Nivel de seguridad" />
+                              <MFXProgressBar id="determinate" fx:id="barNivelSecurity" layoutX="35.0" layoutY="46.0" prefHeight="36.0" prefWidth="202.0" progress="0.0" stylesheets="@../Styles/ProgressBarDemo.css" />
+                              <Label fx:id="labelSecurity" alignment="CENTER" layoutX="73.0" layoutY="90.0" prefHeight="17.0" prefWidth="115.0" styleClass="style-font-black" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </StackPane>
+                  <MFXButton layoutX="556.0" layoutY="685.0" />
+                  <HBox alignment="CENTER_LEFT" layoutX="316.0" layoutY="86.0" prefHeight="144.0" prefWidth="268.0" spacing="20.0" style="-fx-background-color: white;" stylesheets="@../Styles/ProgressBarDemo.css">
+                     <children>
+                        <Label maxWidth="-Infinity" prefHeight="18.0" prefWidth="86.0" text="Determinate" HBox.hgrow="ALWAYS" />
+                        <MFXProgressBar fx:id="determinate" prefHeight="62.0" prefWidth="166.0" />
+                        <Label fx:id="progressLabel" prefHeight="18.0" prefWidth="29.0" />
+                     </children>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </HBox>
+                  <StackPane layoutX="40.0" layoutY="86.0" prefHeight="380.0" prefWidth="266.0">
+                     <children>
+                        <Pane style="-fx-background-color: WHITE;">
+                           <children>
+                              <Label layoutX="29.0" layoutY="14.0" prefHeight="24.0" prefWidth="167.0" style="-fx-font-size: 14;" styleClass="style-font-black" text="Configuracion Actual" />
+                              <Label layoutX="29.0" layoutY="37.0" prefHeight="24.0" prefWidth="216.0" style="-fx-font-size: 11; -fx-text-fill: #585858;" text="Vista de la configuracion guardada" />
+                              <Label layoutX="28.0" layoutY="87.0" prefHeight="17.0" prefWidth="114.0" styleClass="style-font-black" text="Intentos de sesion" />
+                              <JFXTextField id="1" fx:id="attemps" alignment="CENTER" editable="false" focusColor="WHITE" layoutX="173.0" layoutY="79.0" opacity="0.8" prefHeight="34.0" prefWidth="63.0" style="-fx-text-fill: #615FF5; -fx-font-size: 15;" unFocusColor="WHITE" />
+                              <Label layoutX="28.0" layoutY="142.0" prefHeight="17.0" prefWidth="133.0" styleClass="style-font-black" text="Tiempo de inactividad" />
+                              <JFXTextField focusColor="WHITE" layoutX="175.0" layoutY="187.0" opacity="0.8" prefHeight="34.0" prefWidth="63.0" promptText="hora" unFocusColor="WHITE" />
+                              <JFXTextField fx:id="activityTime" alignment="CENTER" editable="false" focusColor="WHITE" layoutX="175.0" layoutY="133.0" opacity="0.8" prefHeight="34.0" prefWidth="63.0" style="-fx-text-fill: #615FF5; -fx-font-size: 15;" unFocusColor="WHITE" />
+                              <Label layoutX="28.0" layoutY="196.0" prefHeight="17.0" prefWidth="103.0" styleClass="style-font-black" text="Hora de backups" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </StackPane>
+                  <Label layoutX="40.0" layoutY="17.0" text="CONFIGURACION">
+                     <styleClass>
+                        <String fx:value="TEXT" />
+                        <String fx:value="color-panel" />
+                     </styleClass>
+                  </Label>
+                  <Label layoutX="40.0" layoutY="44.0" style="-fx-text-fill: #585858;" text="Vista de configuracion de seguridad del sistema.">
+                     <styleClass>
+                        <String fx:value="style-font-black" />
+                        <String fx:value="color-panel" />
+                     </styleClass>
+                  </Label>
+               </children>
+               <styleClass>
+                  <String fx:value="AnchorPane" />
+                  <String fx:value="color-panel" />
+                  <String fx:value="style-font-black" />
+               </styleClass>
+               <padding>
+                  <Insets bottom="20.0" right="10.0" />
+               </padding>
+            </AnchorPane>
+         </content>
+      </MFXScrollPane>
+   </children>
+</AnchorPane>

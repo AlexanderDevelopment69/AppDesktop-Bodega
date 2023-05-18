@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import io.github.palexdev.materialfx.controls.MFXToggleButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+
+<AnchorPane fx:id="root" minHeight="600.0" minWidth="858.0" style="-fx-background-color: transparent;" styleClass="roots" stylesheets="@../../Styles/Style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sfc.appdesktopbodega.Controller.Sale.ProductRecognition.ProductRecognitionController">
+   <children>
+      <StackPane fx:id="imgStack" prefHeight="600.0" prefWidth="434.0" style="-fx-background-color: #2A2A2A;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="423.6" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fx:id="currentFrame" fitHeight="600.0" fitWidth="434.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../../Images/loadingImage.gif" />
+               </image></ImageView>
+         </children>
+      </StackPane>
+      <AnchorPane layoutX="438.0" minWidth="426.0" prefHeight="600.0" prefWidth="426.0" style="-fx-background-color: #2A2A2A;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label prefHeight="32.0" prefWidth="124.0" style="-fx-font-size: 22; -fx-text-fill: WHITE;" styleClass="style-fontRegular-black" text="PRODUCTO" AnchorPane.rightAnchor="210.39999999999998" AnchorPane.topAnchor="68.0" />
+            <Label prefHeight="32.0" prefWidth="174.0" style="-fx-font-size: 12; -fx-text-fill: WHITE;" styleClass="style-font-white" text="Carateristicas del producto" AnchorPane.rightAnchor="159.99999999999997" AnchorPane.topAnchor="100.0" />
+            <Label prefHeight="32.0" prefWidth="74.0" style="-fx-font-size: 12; -fx-text-fill: WHITE;" styleClass="style-font-white" text="Producto" AnchorPane.rightAnchor="260.0" AnchorPane.topAnchor="160.0" />
+            <Label prefHeight="32.0" prefWidth="63.0" style="-fx-font-size: 12; -fx-text-fill: WHITE;" styleClass="style-font-white" text="Marca" AnchorPane.rightAnchor="270.0" AnchorPane.topAnchor="210.0" />
+            <Label prefHeight="32.0" prefWidth="63.0" style="-fx-font-size: 12; -fx-text-fill: WHITE;" styleClass="style-font-white" text="Precio" AnchorPane.rightAnchor="270.0" AnchorPane.topAnchor="260.0" />
+            <Label prefHeight="42.0" prefWidth="174.0" style="-fx-background-radius: 5; -fx-background-color: black; -fx-opacity: 0.2;" styleClass="color-panel" AnchorPane.rightAnchor="72.99999999999997" AnchorPane.topAnchor="154.0">
+               <padding>
+                  <Insets right="20.0" />
+               </padding>
+            </Label>
+            <JFXTextField focusColor="WHITE" prefHeight="44.0" style="-fx-font-size: 13;" styleClass="style-font-white" unFocusColor="WHITE" AnchorPane.rightAnchor="83.19999999999999" AnchorPane.topAnchor="154.0">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </JFXTextField>
+            <Label prefHeight="42.0" prefWidth="174.0" style="-fx-background-radius: 5; -fx-background-color: black; -fx-opacity: 0.2;" styleClass="color-panel" AnchorPane.rightAnchor="72.99999999999997" AnchorPane.topAnchor="206.0">
+               <padding>
+                  <Insets right="20.0" />
+               </padding>
+            </Label>
+            <JFXTextField focusColor="WHITE" prefHeight="44.0" style="-fx-font-size: 13;" styleClass="style-font-white" unFocusColor="WHITE" AnchorPane.rightAnchor="83.19999999999999" AnchorPane.topAnchor="206.0">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </JFXTextField>
+            <Label prefHeight="42.0" prefWidth="174.0" style="-fx-background-radius: 5; -fx-background-color: black; -fx-opacity: 0.2;" styleClass="color-panel" AnchorPane.rightAnchor="72.99999999999997" AnchorPane.topAnchor="256.0">
+               <padding>
+                  <Insets right="20.0" />
+               </padding>
+            </Label>
+            <JFXTextField focusColor="WHITE" prefHeight="44.0" style="-fx-font-size: 13;" styleClass="style-font-white" unFocusColor="WHITE" AnchorPane.rightAnchor="83.19999999999999" AnchorPane.topAnchor="256.0">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </JFXTextField>
+            <ImageView fitHeight="158.0" fitWidth="143.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="120.19999999999999" AnchorPane.rightAnchor="104.39999999999998" AnchorPane.topAnchor="336.8" />
+            <JFXButton fx:id="btnClose" alignment="CENTER" layoutX="380.0" layoutY="5.0" onAction="#close" prefHeight="35.0" prefWidth="35.0" style="-fx-background-radius: 5em;" styleClass="vBoxButtonUsers" text=" " textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Images/close.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+               <ripplerFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#644eff" />
+                        <Stop color="#ee0979" offset="0.007633587786259542" />
+                        <Stop color="#ff6a00" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </ripplerFill>
+            </JFXButton>
+            <JFXButton alignment="CENTER" layoutX="340.0" layoutY="5.0" onAction="#maximize" prefHeight="35.0" prefWidth="35.0" style="-fx-background-radius: 5em;" styleClass="vBoxButtonUsers" text=" " textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Images/expand.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+               <ripplerFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#644eff" />
+                        <Stop color="#ee0979" offset="0.007633587786259542" />
+                        <Stop color="#ff6a00" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </ripplerFill>
+            </JFXButton>
+            <StackPane layoutX="152.0" layoutY="494.0" prefHeight="36.0" prefWidth="99.0" style="-fx-background-color: transparent;">
+               <children>
+                  <JFXButton fx:id="start_btn" onAction="#startCamera" prefHeight="36.0" prefWidth="143.0" style="-fx-background-color: transparent;" styleClass="buttonGeneral-estilo2" text=" " />
+               </children>
+            </StackPane>
+            <StackPane layoutX="313.0" layoutY="550.0" prefHeight="36.0" prefWidth="92.0" style="-fx-background-color: transparent;" AnchorPane.bottomAnchor="29.200000000000045" AnchorPane.rightAnchor="21.399999999999977">
+               <children>
+                  <JFXButton onAction="#go" prefHeight="36.0" prefWidth="143.0" style="-fx-background-radius: 20 20 20 20; -fx-background-color: #615FF5;" styleClass="style-font-white" text="Finalizar" />
+               </children>
+            </StackPane>
+         </children>
+      </AnchorPane>
+      <MFXToggleButton fx:id="toogleButton" layoutX="534.0" layoutY="525.0" length="40.0" onMouseClicked="#action" prefHeight="54.0" prefWidth="191.0" styleClass="style-font-white" text="Encender camara" AnchorPane.bottomAnchor="20.600000000000023" AnchorPane.rightAnchor="133.19999999999993" />
+   </children>
+</AnchorPane>

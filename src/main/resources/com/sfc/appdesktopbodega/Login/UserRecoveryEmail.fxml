@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane fx:id="stackPane" prefHeight="300.0" prefWidth="460.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sfc.appdesktopbodega.Controller.Login.RecoveryPassword.UserRecoveryEmailController">
+   <children>
+      <Pane stylesheets="@../Styles/Style.css">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="260.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/home_circle_icon_137496.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="85.0" layoutY="76.0" styleClass="TEXT" text="Recuperar Contraseña" />
+            <Label layoutX="85.0" layoutY="105.0" prefHeight="17.0" prefWidth="315.0" text="Ingrese el correo electronico para enviar el codigo " />
+            <Label layoutX="85.0" layoutY="122.0" prefHeight="17.0" prefWidth="104.0" text="de recuperacion." />
+            <JFXTextField fx:id="email" focusColor="#6317cd" layoutX="85.0" layoutY="163.0" prefHeight="25.0" prefWidth="225.0" promptText="Usuario o email">
+               <styleClass>
+                  <String fx:value="label-username" />
+                  <String fx:value="labelUsername" />
+               </styleClass>
+            </JFXTextField>
+            <JFXButton layoutX="163.0" layoutY="229.0" onAction="#btnRecovery" prefHeight="43.0" prefWidth="116.0" styleClass="button-Iniciar" text="Enviar" />
+         </children>
+         <styleClass>
+            <String fx:value="login-pane-root" />
+            <String fx:value="style-font-white" />
+         </styleClass>
+      </Pane>
+   </children>
+   <styleClass>
+      <String fx:value="login-pane-root" />
+      <String fx:value="style-font-white" />
+   </styleClass>
+</StackPane>

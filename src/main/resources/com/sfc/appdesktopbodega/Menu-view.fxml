@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXTreeView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane prefHeight="520.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sfc.appdesktopbodega.Controller.MainView.MenuController">
+   <children>
+      <MFXTreeView fx:id="treeViewHide" prefHeight="300.0" prefWidth="200.0" StackPane.alignment="TOP_CENTER">
+         <StackPane.margin>
+            <Insets top="60.0" />
+         </StackPane.margin>
+      </MFXTreeView>
+   </children>
+</StackPane>
