@@ -397,7 +397,7 @@ public class User {
             pst.executeUpdate();
             connection.close();
 
-
+        JOptionPane.showMessageDialog(null,"Registro Correcto");
         }
         return  false;
     }

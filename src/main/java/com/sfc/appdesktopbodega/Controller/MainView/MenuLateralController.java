@@ -6,6 +6,8 @@ import com.jfoenix.controls.JFXDrawer;
 import com.jfoenix.controls.JFXHamburger;
 import com.jfoenix.transitions.hamburger.HamburgerSlideCloseTransition;
 import com.sfc.appdesktopbodega.Controller.Login.LoginController;
+import javafx.application.Platform;
+import javafx.concurrent.Task;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.event.EventHandler;
@@ -68,7 +70,7 @@ public class MenuLateralController implements Initializable {
     private JFXButton min;
 
     LoginController stage1stag2;
-    Stage stage =null;
+    Stage stage = null;
 
     @FXML
     private Label userName;
@@ -82,8 +84,10 @@ public class MenuLateralController implements Initializable {
     private double x = 0;
     private double y = 0;
 
-    public void recibeParametros(LoginController stage1, String texto, String texto1,String texto2, String texto3,String texto4,String texto5,String texto6,String texto7){
-        stage1stag2=stage1;
+    private Region fxml;
+
+    public void recibeParametros(LoginController stage1, String texto, String texto1, String texto2, String texto3, String texto4, String texto5, String texto6, String texto7) {
+        stage1stag2 = stage1;
         userName.setText(texto);
         System.out.println(texto);
         System.out.println(texto1);
@@ -96,12 +100,10 @@ public class MenuLateralController implements Initializable {
 
     }
 
-    public void recibeParametros(AnchorPane stackDashboard){
-        this.stackDashboard=stackDashboard;
+    public void recibeParametros(AnchorPane stackDashboard) {
+        this.stackDashboard = stackDashboard;
 
     }
-
-
 
 
     @FXML
@@ -109,17 +111,16 @@ public class MenuLateralController implements Initializable {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/sfc/appdesktopbodega/Login/Login-view.fxml"));
         Parent root = fxmlLoader.load();
         Stage stage = new Stage();
-        stage.initStyle( StageStyle.UNDECORATED );
+        stage.initStyle(StageStyle.UNDECORATED);
         stage.setScene(new Scene(root));
         stage.show();
-        Stage myStage=(Stage) this.btnExit.getScene().getWindow();
+        Stage myStage = (Stage) this.btnExit.getScene().getWindow();
         myStage.close();
 
     }
 
 
-    public  void initopup()
-    {
+    public void initopup() {
 
 //        JFXListView<String> listview= new JFXListView<>();
 //
@@ -195,7 +196,6 @@ public class MenuLateralController implements Initializable {
 //
 
 
-
 //    void userManagement() throws IOException {
 //
 //        Region fxml= FXMLLoader.load(getClass().getResource("/com/sfc/appdesktopbodega/User/UserDashboard3.fxml"));
@@ -224,17 +224,26 @@ public class MenuLateralController implements Initializable {
 
 
     @FXML
-   public void managment() throws IOException {
+    public void openUserManagement() throws IOException {
 
         //    menuPopup();
 //        menus menu=new menus();
 //        menu.menuPopup(btnManagment,stackDashboard);
 
-        Region fxml= FXMLLoader.load(getClass().getResource("/com/sfc/appdesktopbodega/User/MainUser.fxml"));
-        stackDashboard.getChildren().removeAll();
-        stackDashboard.getChildren().setAll(fxml);
-        fxml.prefWidthProperty().bind(stackDashboard.widthProperty());
-        fxml.prefHeightProperty().bind(stackDashboard.heightProperty());
+//        Region fxml= FXMLLoader.load(getClass().getResource("/com/sfc/appdesktopbodega/User/MainUser.fxml"));
+//        stackDashboard.getChildren().removeAll();
+//        stackDashboard.getChildren().setAll(fxml);
+//        fxml.prefWidthProperty().bind(stackDashboard.widthProperty());
+//        fxml.prefHeightProperty().bind(stackDashboard.heightProperty());
+
+
+
+                fxml = FXMLLoader.load(getClass().getResource("/com/sfc/appdesktopbodega/User/MainUser.fxml"));
+                stackDashboard.getChildren().removeAll();
+                fxml.prefWidthProperty().bind(stackDashboard.widthProperty());
+                fxml.prefHeightProperty().bind(stackDashboard.heightProperty());
+                stackDashboard.getChildren().setAll(fxml);
+
 
 
 
@@ -242,26 +251,25 @@ public class MenuLateralController implements Initializable {
 
     }
 
-    public void vista(){
+    public void vista() {
 
 
     }
-
 
 
     @FXML
-    void provider(ActionEvent event) throws IOException {
-        menus menu=new menus();
+    void openProvider(ActionEvent event) throws IOException {
+        menus menu = new menus();
         menu.provider(stackDashboard);
 
     }
 
     @FXML
-    void sales(ActionEvent event) throws IOException {
+    void openSales(ActionEvent event) throws IOException {
 //        menus menu=new menus();
 //        menu.sales(stackDashboard);
 
-        Region fxml= FXMLLoader.load(getClass().getResource("/com/sfc/appdesktopbodega/Sale/MainSale.fxml"));
+        Region fxml = FXMLLoader.load(getClass().getResource("/com/sfc/appdesktopbodega/Sale/MainSale.fxml"));
         stackDashboard.getChildren().removeAll();
         stackDashboard.getChildren().setAll(fxml);
         fxml.prefWidthProperty().bind(stackDashboard.widthProperty());
@@ -269,27 +277,28 @@ public class MenuLateralController implements Initializable {
     }
 
     @FXML
-    void warehouse(ActionEvent event) throws IOException {
+    void openWarehouse(ActionEvent event) throws IOException {
 //        menus menu=new menus();
 //        menu.warehouse(stackDashboard);
-        Region fxml= FXMLLoader.load(getClass().getResource("/com/sfc/appdesktopbodega/Product/MainProduct.fxml"));
+        Region fxml = FXMLLoader.load(getClass().getResource("/com/sfc/appdesktopbodega/Product/MainProduct.fxml"));
         stackDashboard.getChildren().removeAll();
         stackDashboard.getChildren().setAll(fxml);
         fxml.prefWidthProperty().bind(stackDashboard.widthProperty());
         fxml.prefHeightProperty().bind(stackDashboard.heightProperty());
     }
+
     @FXML
-    void configuration(ActionEvent event) throws IOException {
-        menus menu=new menus();
+    void openConfiguration(ActionEvent event) throws IOException {
+        menus menu = new menus();
         menu.configuration(stackDashboard);
     }
 
     @FXML
-    void custormers(ActionEvent event) throws IOException {
+    void openCustomers(ActionEvent event) throws IOException {
 //        menus menu=new menus();
 //        menu.custormers(stackDashboard);
 
-        Region fxml= FXMLLoader.load(getClass().getResource("/com/sfc/appdesktopbodega/Customer/MainCustomer.fxml"));
+        Region fxml = FXMLLoader.load(getClass().getResource("/com/sfc/appdesktopbodega/Customer/MainCustomer.fxml"));
         stackDashboard.getChildren().removeAll();
         stackDashboard.getChildren().setAll(fxml);
         fxml.prefWidthProperty().bind(stackDashboard.widthProperty());
@@ -299,36 +308,33 @@ public class MenuLateralController implements Initializable {
 
     @FXML
     void maximize(ActionEvent event) {
-         stage = (Stage) borderPane.getScene().getWindow();
-         if(stage.isMaximized()){
+        stage = (Stage) borderPane.getScene().getWindow();
+        if (stage.isMaximized()) {
             stage.setMaximized(false);
 
-         }else{
-             new FadeIn(borderPane).play();
-             stage.setMaximized(true);
-         }
-
-
+        } else {
+            new FadeIn(borderPane).play();
+            stage.setMaximized(true);
+        }
 
 
     }
+
     @FXML
     void minimize(ActionEvent event) {
-        stage = (Stage)borderPane.getScene().getWindow();
+        stage = (Stage) borderPane.getScene().getWindow();
         stage.setIconified(true);
 //        new ZoomOutDown(paneRoot).play();
 
     }
 
 
-
-
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
-        try{
+        try {
             // TODO
-          AnchorPane box = FXMLLoader.load(getClass().getResource("/com/sfc/appdesktopbodega/MainView/MenuOptions.fxml"));
+            AnchorPane box = FXMLLoader.load(getClass().getResource("/com/sfc/appdesktopbodega/MainView/MenuOptions.fxml"));
             drawer.setSidePane(box);
             drawer.setMinWidth(0); // this is the new code added
 //            drawer.prefHeightProperty().bind(paneLateral.heightProperty());
@@ -374,14 +380,6 @@ public class MenuLateralController implements Initializable {
         });
 
 
-
-
-
-
-
-
-
-
 // *MENU TOP AGREGADO DESDE OTRO FXML
 
 //        try {
@@ -421,4 +419,6 @@ public class MenuLateralController implements Initializable {
         });
 
     }
+
+
 }

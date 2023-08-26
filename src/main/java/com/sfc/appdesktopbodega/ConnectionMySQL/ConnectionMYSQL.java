@@ -14,7 +14,8 @@ public class ConnectionMYSQL {
         String dbName = "bodega";
         String userName = "root";
         String password = "alexander";
-        String ip="192.168.88.14";
+        String ip="192.168.88.10";
+//        String ip="20.51.242.204";
 
         try{
 

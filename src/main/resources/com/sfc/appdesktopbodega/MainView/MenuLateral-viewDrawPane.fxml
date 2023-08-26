@@ -61,7 +61,7 @@
                                 <Insets left="5.0" />
                             </padding>
                         </JFXButton>
-                        <JFXButton fx:id="btnManagment" onAction="#managment" prefHeight="47.0" prefWidth="55.0" styleClass="vBoxButtonUsers" text=" " textFill="WHITE">
+                        <JFXButton fx:id="btnManagment" onAction="#openUserManagement" prefHeight="47.0" prefWidth="55.0" styleClass="vBoxButtonUsers" text=" " textFill="WHITE">
                             <ripplerFill>
                                 <LinearGradient endX="1.0" endY="1.0">
                                     <stops>
@@ -92,7 +92,7 @@
                                 <Insets left="5.0" />
                             </padding>
                         </JFXButton>
-                        <JFXButton fx:id="btnSales" onAction="#sales" prefHeight="47.0" prefWidth="55.0" styleClass="vBoxButtonUsers" text=" " textFill="WHITE">
+                        <JFXButton fx:id="btnSales" onAction="#openSales" prefHeight="47.0" prefWidth="55.0" styleClass="vBoxButtonUsers" text=" " textFill="WHITE">
                             <VBox.margin>
                                 <Insets />
                             </VBox.margin>
@@ -123,7 +123,7 @@
                                 <Insets left="5.0" />
                             </padding>
                         </JFXButton>
-                        <JFXButton fx:id="btnWarehouse" onAction="#warehouse" prefHeight="47.0" prefWidth="55.0" styleClass="vBoxButtonUsers" text=" " textFill="WHITE">
+                        <JFXButton fx:id="btnWarehouse" onAction="#openWarehouse" prefHeight="47.0" prefWidth="55.0" styleClass="vBoxButtonUsers" text=" " textFill="WHITE">
                             <VBox.margin>
                                 <Insets />
                             </VBox.margin>
@@ -159,7 +159,7 @@
                                 <Insets left="5.0" />
                             </padding>
                         </JFXButton>
-                        <JFXButton fx:id="btnCustomers" onAction="#custormers" prefHeight="47.0" prefWidth="55.0" styleClass="vBoxButtonUsers" text=" " textFill="WHITE">
+                        <JFXButton fx:id="btnCustomers" onAction="#openCustomers" prefHeight="47.0" prefWidth="55.0" styleClass="vBoxButtonUsers" text=" " textFill="WHITE">
                             <ripplerFill>
                                 <LinearGradient endX="1.0" endY="1.0">
                                     <stops>
@@ -195,7 +195,7 @@
                                 <Insets left="5.0" />
                             </padding>
                         </JFXButton>
-                        <JFXButton fx:id="btnProvider" onAction="#provider" prefHeight="47.0" prefWidth="55.0" styleClass="vBoxButtonUsers" text=" " textFill="WHITE">
+                        <JFXButton fx:id="btnProvider" onAction="#openProvider" prefHeight="47.0" prefWidth="55.0" styleClass="vBoxButtonUsers" text=" " textFill="WHITE">
                             <ripplerFill>
                                 <LinearGradient endX="1.0" endY="1.0">
                                     <stops>
@@ -231,7 +231,7 @@
                                 <Insets left="5.0" />
                             </padding>
                         </JFXButton>
-                        <JFXButton fx:id="btnConfiguration" onAction="#configuration" prefHeight="47.0" prefWidth="55.0" styleClass="vBoxButtonUsers" text=" " textFill="WHITE">
+                        <JFXButton fx:id="btnConfiguration" onAction="#openConfiguration" prefHeight="47.0" prefWidth="55.0" styleClass="vBoxButtonUsers" text=" " textFill="WHITE">
                             <ripplerFill>
                                 <LinearGradient endX="1.0" endY="1.0">
                                     <stops>

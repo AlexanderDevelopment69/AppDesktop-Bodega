@@ -136,8 +136,9 @@ AnchorPane JFXTextField , JFXPasswordField{
 }
 
 .TEXT{
-    -fx-font-size: 19;
+    -fx-font-size: 21;
     -fx-font-family: "Poppins Regular";
+
 }
 .TEXT19-BLACK{
     -fx-font-size: 19;
